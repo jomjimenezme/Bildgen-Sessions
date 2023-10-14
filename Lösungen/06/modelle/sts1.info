@@ -1,0 +1,3 @@
+0.6       0.7        # umin, umax
+0.4       0.6        # vmin, vmax
+0.8774964 7.8974676  # near, far

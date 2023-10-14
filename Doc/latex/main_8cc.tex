@@ -1,0 +1,56 @@
+\hypertarget{main_8cc}{}\subsection{main.\+cc-\/\+Dateireferenz}
+\label{main_8cc}\index{main.\+cc@{main.\+cc}}
+{\ttfamily \#include $<$Q\+Application$>$}\newline
+{\ttfamily \#include $<$Q\+Object$>$}\newline
+{\ttfamily \#include $<$Q\+Wait\+Condition$>$}\newline
+{\ttfamily \#include \char`\"{}drawing.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drawops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drawwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}iothread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}maindraw.\+h\char`\"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für main.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Dieses Hauptprogramm ist für alle Draw-\/\+Programme fest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+\begin{DoxyAuthor}{Autor}
+Holger Arndt, Martin Galgon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+4 
+\end{DoxyVersion}
+\begin{DoxyDate}{Datum}
+11.\+11.\+2016 
+\end{DoxyDate}
+
+
+\subsubsection{Dokumentation der Funktionen}
+\mbox{\Hypertarget{main_8cc_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cc_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\paragraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Dieses Hauptprogramm ist für alle Draw-\/\+Programme fest. 
+
+Als Pseudo-\/\+Hauptprogramm dient die Funktion {\ttfamily maindraw}. 
+
+Definiert in Zeile 17 der Datei main.\+cc.
+
+
+
+Benutzt Draw\+Window\+::allow\+Close(), Draw\+Window\+::change\+Drawing(), Draw\+Window\+::change\+Size(), Draw\+Ops\+::get\+Instance(), I\+O\+Thread\+::get\+Instance(), Draw\+Window\+::get\+Instance(), Draw\+Window\+::no\+Drawing(), Draw\+Window\+::set\+Zoom(), Draw\+Ops\+::sig\+Activate(), I\+O\+Thread\+::sig\+Allow\+Close(), Draw\+Ops\+::sig\+Dead(), Draw\+Ops\+::sig\+Size(), Draw\+Ops\+::sig\+Update() und Draw\+Ops\+::sig\+Zoom().
+

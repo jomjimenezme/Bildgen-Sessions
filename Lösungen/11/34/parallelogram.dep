@@ -1,0 +1,2 @@
+parallelogram.o parallelogram.dep : parallelogram.cc parallelogram.h ray.h object.h \
+ hitinfo.h planar.h

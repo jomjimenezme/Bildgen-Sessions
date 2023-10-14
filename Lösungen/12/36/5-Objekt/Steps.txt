@@ -1,0 +1,38 @@
+AI_logo
+
+
+Was ist AI_bar?
+Was ist AI_node?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  object { AI_bar translate < 2, 0, 0>} 
+  object { AI_node translate < 2, 0, 0 > }
+
+  
+  
+  
+  2 Schritte 
+  1 
+  #declare AI_lattice = union{
+  object{ AI_bar translate < 2, 0, 0>}
+  object{ AI_bar translate < 2, 0, 0> rotate 90*z} 
+  object { AI_node translate < 2, 0, 0 > }
+}
+  
+  2
+  object {
+    AI_lattice
+    pigment { rgb AI_green }
+  }

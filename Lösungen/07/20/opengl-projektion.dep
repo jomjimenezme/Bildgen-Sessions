@@ -1,0 +1,2 @@
+opengl-projektion.o opengl-projektion.dep : opengl-projektion.cc glsupport.h gltypes.h \
+ in-reader.h

@@ -1,0 +1,1 @@
+sphere.o sphere.dep : sphere.cc sphere.h ray.h object.h hitinfo.h

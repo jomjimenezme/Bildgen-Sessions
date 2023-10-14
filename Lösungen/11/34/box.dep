@@ -1,0 +1,2 @@
+box.o box.dep : box.cc box.h ray.h object.h hitinfo.h parallelogram.h planar.h \
+ parallelepiped.h

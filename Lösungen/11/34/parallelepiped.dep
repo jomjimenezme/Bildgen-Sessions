@@ -1,0 +1,2 @@
+parallelepiped.o parallelepiped.dep : parallelepiped.cc parallelepiped.h ray.h object.h \
+ hitinfo.h parallelogram.h planar.h

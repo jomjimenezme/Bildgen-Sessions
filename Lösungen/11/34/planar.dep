@@ -1,0 +1,1 @@
+planar.o planar.dep : planar.cc planar.h ray.h object.h hitinfo.h

@@ -1,0 +1,244 @@
+\hypertarget{classIOThread}{}\subsection{I\+O\+Thread Klassenreferenz}
+\label{classIOThread}\index{I\+O\+Thread@{I\+O\+Thread}}
+
+
+Der Thread, der in der Kommandoshell läuft; verwendet Singleton-\/\+Pattern.  
+
+
+
+
+{\ttfamily \#include $<$iothread.\+h$>$}
+
+
+
+Klassendiagramm für I\+O\+Thread\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classIOThread__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von I\+O\+Thread\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classIOThread__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Signale}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIOThread_a54c13ad95a4121f8350490f3498e3441}{sig\+Allow\+Close}} (Q\+Wait\+Condition $\ast$close\+Window)
+\begin{DoxyCompactList}\small\item\em Signalisiert dem Fenster das manuelle Schließen zuzulassen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classIOThread_a223f34be4cb93bc966782c21d1f111be}{sleep}} (int i)
+\begin{DoxyCompactList}\small\item\em Schlafe für {\ttfamily i} Sekunden. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classIOThread_a0edafa7b86ce9da704411c957c67a7d2}{msleep}} (int i)
+\begin{DoxyCompactList}\small\item\em Schlafe für {\ttfamily i} Milliosekunden. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classIOThread_a48db366a9cdd047fa160726186955170}{usleep}} (int i)
+\begin{DoxyCompactList}\small\item\em Schlafe für {\ttfamily i} Mikrosekunden. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classIOThread_a0518abc93c6d77c2e085d431d2b8d42c}{wait\+For\+Window}} (unsigned time=U\+I\+N\+T\+\_\+\+M\+AX)
+\begin{DoxyCompactList}\small\item\em Veranlasst die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz auf das schließen des Fensters zu warten. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} $\ast$ \mbox{\hyperlink{classIOThread_a99c8f19b8b37cc58f0d7b7458de7631e}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gibt die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Geschützte Methoden}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classIOThread_a9f1baa38fcd96609fd824f78f3072be9}{run}} () override
+\begin{DoxyCompactList}\small\item\em Ruft die Methode maindraw auf. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIOThread_aef03d0e0e96b2add5f8290232bd96716}{await\+Window\+Close}} (unsigned time=U\+I\+N\+T\+\_\+\+M\+AX)
+\begin{DoxyCompactList}\small\item\em Veranlasst die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz auf das schließen des Fensters zu warten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Statische, private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} $\ast$ \mbox{\hyperlink{classIOThread_af2909448c69876879af1fa33f3a8d97a}{the\+Instance}}
+\begin{DoxyCompactList}\small\item\em Die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+Der Thread, der in der Kommandoshell läuft; verwendet Singleton-\/\+Pattern. 
+
+Definiert in Zeile 19 der Datei iothread.\+h.
+
+
+
+\subsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classIOThread_aef03d0e0e96b2add5f8290232bd96716}\label{classIOThread_aef03d0e0e96b2add5f8290232bd96716}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!await\+Window\+Close@{await\+Window\+Close}}
+\index{await\+Window\+Close@{await\+Window\+Close}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{await\+Window\+Close()}{awaitWindowClose()}}
+{\footnotesize\ttfamily void I\+O\+Thread\+::await\+Window\+Close (\begin{DoxyParamCaption}\item[{unsigned}]{time = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Veranlasst die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz auf das schließen des Fensters zu warten. 
+
+
+
+Definiert in Zeile 28 der Datei iothread.\+h.
+
+
+
+Benutzt sig\+Allow\+Close().
+
+
+
+Wird benutzt von wait\+For\+Window().
+
+\mbox{\Hypertarget{classIOThread_a99c8f19b8b37cc58f0d7b7458de7631e}\label{classIOThread_a99c8f19b8b37cc58f0d7b7458de7631e}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classIOThread}{I\+O\+Thread}}$\ast$ I\+O\+Thread\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gibt die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz zurück. 
+
+
+
+Definiert in Zeile 58 der Datei iothread.\+h.
+
+
+
+Benutzt the\+Instance.
+
+
+
+Wird benutzt von main() und wait\+For\+Window().
+
+\mbox{\Hypertarget{classIOThread_a0edafa7b86ce9da704411c957c67a7d2}\label{classIOThread_a0edafa7b86ce9da704411c957c67a7d2}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!msleep@{msleep}}
+\index{msleep@{msleep}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{msleep()}{msleep()}}
+{\footnotesize\ttfamily static void I\+O\+Thread\+::msleep (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Schlafe für {\ttfamily i} Milliosekunden. 
+
+
+
+Definiert in Zeile 47 der Datei iothread.\+h.
+
+
+
+Wird benutzt von Drawing\+::draw\+Circle(), Drawing\+::draw\+Line(), Drawing\+::draw\+Point() und Drawing\+::draw\+Polygon().
+
+\mbox{\Hypertarget{classIOThread_a9f1baa38fcd96609fd824f78f3072be9}\label{classIOThread_a9f1baa38fcd96609fd824f78f3072be9}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!run@{run}}
+\index{run@{run}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void I\+O\+Thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Ruft die Methode maindraw auf. 
+
+
+
+Definiert in Zeile 67 der Datei iothread.\+h.
+
+
+
+Benutzt maindraw().
+
+\mbox{\Hypertarget{classIOThread_a54c13ad95a4121f8350490f3498e3441}\label{classIOThread_a54c13ad95a4121f8350490f3498e3441}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!sig\+Allow\+Close@{sig\+Allow\+Close}}
+\index{sig\+Allow\+Close@{sig\+Allow\+Close}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{sig\+Allow\+Close}{sigAllowClose}}
+{\footnotesize\ttfamily void I\+O\+Thread\+::sig\+Allow\+Close (\begin{DoxyParamCaption}\item[{Q\+Wait\+Condition $\ast$}]{close\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signalisiert dem Fenster das manuelle Schließen zuzulassen. 
+
+
+
+Wird benutzt von await\+Window\+Close() und main().
+
+\mbox{\Hypertarget{classIOThread_a223f34be4cb93bc966782c21d1f111be}\label{classIOThread_a223f34be4cb93bc966782c21d1f111be}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!sleep@{sleep}}
+\index{sleep@{sleep}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily static void I\+O\+Thread\+::sleep (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Schlafe für {\ttfamily i} Sekunden. 
+
+
+
+Definiert in Zeile 45 der Datei iothread.\+h.
+
+\mbox{\Hypertarget{classIOThread_a48db366a9cdd047fa160726186955170}\label{classIOThread_a48db366a9cdd047fa160726186955170}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!usleep@{usleep}}
+\index{usleep@{usleep}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{usleep()}{usleep()}}
+{\footnotesize\ttfamily static void I\+O\+Thread\+::usleep (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Schlafe für {\ttfamily i} Mikrosekunden. 
+
+
+
+Definiert in Zeile 49 der Datei iothread.\+h.
+
+\mbox{\Hypertarget{classIOThread_a0518abc93c6d77c2e085d431d2b8d42c}\label{classIOThread_a0518abc93c6d77c2e085d431d2b8d42c}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!wait\+For\+Window@{wait\+For\+Window}}
+\index{wait\+For\+Window@{wait\+For\+Window}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{wait\+For\+Window()}{waitForWindow()}}
+{\footnotesize\ttfamily static void I\+O\+Thread\+::wait\+For\+Window (\begin{DoxyParamCaption}\item[{unsigned}]{time = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Veranlasst die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz auf das schließen des Fensters zu warten. 
+
+
+
+Definiert in Zeile 52 der Datei iothread.\+h.
+
+
+
+Benutzt await\+Window\+Close() und get\+Instance().
+
+
+
+Wird benutzt von maindraw().
+
+
+
+\subsubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classIOThread_af2909448c69876879af1fa33f3a8d97a}\label{classIOThread_af2909448c69876879af1fa33f3a8d97a}} 
+\index{I\+O\+Thread@{I\+O\+Thread}!the\+Instance@{the\+Instance}}
+\index{the\+Instance@{the\+Instance}!I\+O\+Thread@{I\+O\+Thread}}
+\paragraph{\texorpdfstring{the\+Instance}{theInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIOThread}{I\+O\+Thread}}$\ast$ I\+O\+Thread\+::the\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Die \mbox{\hyperlink{classIOThread}{I\+O\+Thread}} Instanz. 
+
+
+
+Definiert in Zeile 25 der Datei iothread.\+h.
+
+
+
+Wird benutzt von get\+Instance().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{iothread_8h}{iothread.\+h}}\end{DoxyCompactItemize}

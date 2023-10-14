@@ -1,0 +1,384 @@
+\begin{theindex}
+
+  \item {$\sim$\+Drawing}
+    \subitem {Drawing}, \hyperpage{9}
+
+  \indexspace
+
+  \item {allow\+\_\+close}
+    \subitem {Draw\+Window}, \hyperpage{28}
+  \item {allow\+Close}
+    \subitem {Draw\+Window}, \hyperpage{25}
+  \item {await\+Window\+Close}
+    \subitem {I\+O\+Thread}, \hyperpage{31}
+
+  \indexspace
+
+  \item {bsp1.\+cc}, \hyperpage{41}
+    \subitem {maindraw}, \hyperpage{42}
+
+  \indexspace
+
+  \item {center}
+    \subitem {Draw\+Window}, \hyperpage{25}
+  \item {change\+Drawing}
+    \subitem {Draw\+Window}, \hyperpage{25}
+  \item {change\+Size}
+    \subitem {Draw\+Ops}, \hyperpage{19}
+    \subitem {Draw\+Window}, \hyperpage{26}
+  \item {close\+Event}
+    \subitem {Draw\+Window}, \hyperpage{26}
+  \item {cppqt.\+h}, \hyperpage{42}
+  \item {current\+Drw}
+    \subitem {Draw\+Window}, \hyperpage{28}
+
+  \indexspace
+
+  \item {D\+Point2D}
+    \subitem {point2d.\+h}, \hyperpage{63}
+  \item {default\+Sleep\+Milli}
+    \subitem {Drawing}, \hyperpage{15}
+  \item {draw\+Circle}
+    \subitem {Drawing}, \hyperpage{9}
+  \item {Draw\+Colour}, \hyperpage{3}
+    \subitem {Draw\+Colour}, \hyperpage{4, 5}
+  \item {draw\+Line}
+    \subitem {Drawing}, \hyperpage{9, 10}
+  \item {Draw\+Ops}, \hyperpage{17}
+    \subitem {change\+Size}, \hyperpage{19}
+    \subitem {Draw\+Ops}, \hyperpage{19}
+    \subitem {get\+Instance}, \hyperpage{19}
+    \subitem {make\+Active}, \hyperpage{20}
+    \subitem {obituary}, \hyperpage{20}
+    \subitem {set\+Zoom}, \hyperpage{20}
+    \subitem {sig\+Activate}, \hyperpage{20}
+    \subitem {sig\+Dead}, \hyperpage{21}
+    \subitem {sig\+Size}, \hyperpage{21}
+    \subitem {sig\+Update}, \hyperpage{21}
+    \subitem {sig\+Zoom}, \hyperpage{21}
+    \subitem {the\+Instance}, \hyperpage{22}
+    \subitem {update\+If\+Active}, \hyperpage{21}
+  \item {draw\+Point}
+    \subitem {Drawing}, \hyperpage{10}
+  \item {draw\+Polygon}
+    \subitem {Drawing}, \hyperpage{11}
+  \item {draw\+Text}
+    \subitem {Drawing}, \hyperpage{11}
+  \item {Draw\+Window}, \hyperpage{22}
+    \subitem {allow\+\_\+close}, \hyperpage{28}
+    \subitem {allow\+Close}, \hyperpage{25}
+    \subitem {center}, \hyperpage{25}
+    \subitem {change\+Drawing}, \hyperpage{25}
+    \subitem {change\+Size}, \hyperpage{26}
+    \subitem {close\+Event}, \hyperpage{26}
+    \subitem {current\+Drw}, \hyperpage{28}
+    \subitem {Draw\+Window}, \hyperpage{25}
+    \subitem {get\+Drawing}, \hyperpage{26}
+    \subitem {get\+Instance}, \hyperpage{26}
+    \subitem {no\+Drawing}, \hyperpage{27}
+    \subitem {paint\+Event}, \hyperpage{27}
+    \subitem {set\+Zoom}, \hyperpage{27}
+    \subitem {the\+Instance}, \hyperpage{28}
+    \subitem {zoom}, \hyperpage{28}
+  \item {drawcolour.\+h}, \hyperpage{43}
+    \subitem {operator$<$$<$}, \hyperpage{44}
+    \subitem {operator$>$$>$}, \hyperpage{44}
+  \item {Drawing}, \hyperpage{5}
+    \subitem {$\sim$\+Drawing}, \hyperpage{9}
+    \subitem {default\+Sleep\+Milli}, \hyperpage{15}
+    \subitem {draw\+Circle}, \hyperpage{9}
+    \subitem {draw\+Line}, \hyperpage{9, 10}
+    \subitem {draw\+Point}, \hyperpage{10}
+    \subitem {draw\+Polygon}, \hyperpage{11}
+    \subitem {draw\+Text}, \hyperpage{11}
+    \subitem {Drawing}, \hyperpage{8, 9}
+    \subitem {get\+Height}, \hyperpage{11}
+    \subitem {get\+Image}, \hyperpage{12}
+    \subitem {get\+Mutex}, \hyperpage{12}
+    \subitem {get\+Point\+Colour}, \hyperpage{12}
+    \subitem {get\+Width}, \hyperpage{13}
+    \subitem {img}, \hyperpage{16}
+    \subitem {img\+Mutex}, \hyperpage{16}
+    \subitem {load\+Image}, \hyperpage{13}
+    \subitem {makeanim}, \hyperpage{13}
+    \subitem {operator=}, \hyperpage{13, 14}
+    \subitem {save\+P\+GM}, \hyperpage{14}
+    \subitem {save\+P\+NG}, \hyperpage{14}
+    \subitem {save\+P\+PM}, \hyperpage{14}
+    \subitem {set\+Sleep\+Time}, \hyperpage{14}
+    \subitem {set\+Zoom}, \hyperpage{15}
+    \subitem {show}, \hyperpage{15}
+    \subitem {sleep\+Milli}, \hyperpage{16}
+    \subitem {update}, \hyperpage{15}
+  \item {drawing.\+cc}, \hyperpage{44}
+  \item {drawing.\+h}, \hyperpage{45}
+  \item {drawops.\+cc}, \hyperpage{46}
+  \item {drawops.\+h}, \hyperpage{47}
+  \item {drawwindow.\+cc}, \hyperpage{48}
+  \item {drawwindow.\+h}, \hyperpage{48}
+
+  \indexspace
+
+  \item {el}
+    \subitem {Matrix4x4}, \hyperpage{34}
+    \subitem {Vec3D}, \hyperpage{39}
+    \subitem {Vec4D}, \hyperpage{41}
+
+  \indexspace
+
+  \item {get\+Drawing}
+    \subitem {Draw\+Window}, \hyperpage{26}
+  \item {get\+Height}
+    \subitem {Drawing}, \hyperpage{11}
+  \item {get\+Image}
+    \subitem {Drawing}, \hyperpage{12}
+  \item {get\+Instance}
+    \subitem {Draw\+Ops}, \hyperpage{19}
+    \subitem {Draw\+Window}, \hyperpage{26}
+    \subitem {I\+O\+Thread}, \hyperpage{31}
+  \item {get\+Mutex}
+    \subitem {Drawing}, \hyperpage{12}
+  \item {get\+Point\+Colour}
+    \subitem {Drawing}, \hyperpage{12}
+  \item {get\+Width}
+    \subitem {Drawing}, \hyperpage{13}
+
+  \indexspace
+
+  \item {I\+O\+Thread}, \hyperpage{29}
+    \subitem {await\+Window\+Close}, \hyperpage{31}
+    \subitem {get\+Instance}, \hyperpage{31}
+    \subitem {msleep}, \hyperpage{31}
+    \subitem {run}, \hyperpage{32}
+    \subitem {sig\+Allow\+Close}, \hyperpage{32}
+    \subitem {sleep}, \hyperpage{32}
+    \subitem {the\+Instance}, \hyperpage{33}
+    \subitem {usleep}, \hyperpage{32}
+    \subitem {wait\+For\+Window}, \hyperpage{32}
+  \item {I\+Point2D}
+    \subitem {point2d.\+h}, \hyperpage{63}
+  \item {img}
+    \subitem {Drawing}, \hyperpage{16}
+  \item {img\+Mutex}
+    \subitem {Drawing}, \hyperpage{16}
+  \item {iothread.\+h}, \hyperpage{50}
+
+  \indexspace
+
+  \item {kreuzprod}
+    \subitem {vec3d.\+h}, \hyperpage{67}
+
+  \indexspace
+
+  \item {load\+Image}
+    \subitem {Drawing}, \hyperpage{13}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.\+cc}, \hyperpage{51}
+  \item {main.\+cc}, \hyperpage{51}
+    \subitem {main}, \hyperpage{51}
+  \item {maindraw}
+    \subitem {bsp1.\+cc}, \hyperpage{42}
+    \subitem {maindraw.\+h}, \hyperpage{53}
+  \item {maindraw.\+h}, \hyperpage{52}
+    \subitem {maindraw}, \hyperpage{53}
+  \item {make\+Active}
+    \subitem {Draw\+Ops}, \hyperpage{20}
+  \item {makeanim}
+    \subitem {Drawing}, \hyperpage{13}
+  \item {Matrix4x4}, \hyperpage{33}
+    \subitem {el}, \hyperpage{34}
+    \subitem {Matrix4x4}, \hyperpage{34}
+  \item {matrix4x4.\+h}, \hyperpage{53}
+    \subitem {operator$<$$<$}, \hyperpage{55}
+    \subitem {operator$\ast$}, \hyperpage{55}
+  \item {msleep}
+    \subitem {I\+O\+Thread}, \hyperpage{31}
+
+  \indexspace
+
+  \item {no\+Drawing}
+    \subitem {Draw\+Window}, \hyperpage{27}
+  \item {norm}
+    \subitem {point2d.\+cc}, \hyperpage{58}
+    \subitem {point2d.\+h}, \hyperpage{63}
+    \subitem {vec3d.\+h}, \hyperpage{67}
+
+  \indexspace
+
+  \item {obituary}
+    \subitem {Draw\+Ops}, \hyperpage{20}
+  \item {operator Point2\+D$<$ U $>$}
+    \subitem {Point2D}, \hyperpage{36}
+  \item {operator$<$$<$}
+    \subitem {drawcolour.\+h}, \hyperpage{44}
+    \subitem {matrix4x4.\+h}, \hyperpage{55}
+    \subitem {point2d.\+cc}, \hyperpage{59}
+    \subitem {point2d.\+h}, \hyperpage{65}
+    \subitem {vec3d.\+h}, \hyperpage{68}
+    \subitem {vec4d.\+h}, \hyperpage{71}
+  \item {operator$>$$>$}
+    \subitem {drawcolour.\+h}, \hyperpage{44}
+    \subitem {point2d.\+cc}, \hyperpage{60}
+    \subitem {point2d.\+h}, \hyperpage{65}
+  \item {operator$\ast$}
+    \subitem {matrix4x4.\+h}, \hyperpage{55}
+    \subitem {point2d.\+cc}, \hyperpage{58}
+    \subitem {point2d.\+h}, \hyperpage{63, 64}
+    \subitem {vec3d.\+h}, \hyperpage{68}
+  \item {operator+}
+    \subitem {point2d.\+cc}, \hyperpage{59}
+    \subitem {point2d.\+h}, \hyperpage{64}
+    \subitem {vec3d.\+h}, \hyperpage{68}
+  \item {operator+=}
+    \subitem {Vec3D}, \hyperpage{38}
+  \item {operator-\/}
+    \subitem {point2d.\+cc}, \hyperpage{59}
+    \subitem {point2d.\+h}, \hyperpage{64}
+    \subitem {vec3d.\+h}, \hyperpage{68}
+  \item {operator/}
+    \subitem {point2d.\+cc}, \hyperpage{59}
+    \subitem {point2d.\+h}, \hyperpage{64}
+    \subitem {vec3d.\+h}, \hyperpage{68}
+  \item {operator=}
+    \subitem {Drawing}, \hyperpage{13, 14}
+
+  \indexspace
+
+  \item {P\+O\+I\+N\+T2\+D\+\_\+\+CC}
+    \subitem {point2d.\+cc}, \hyperpage{58}
+  \item {paint\+Event}
+    \subitem {Draw\+Window}, \hyperpage{27}
+  \item {Point2\+D$<$ T $>$}, \hyperpage{35}
+  \item {Point2D}
+    \subitem {operator Point2\+D$<$ U $>$}, \hyperpage{36}
+    \subitem {Point2D}, \hyperpage{36}
+    \subitem {x}, \hyperpage{37}
+    \subitem {y}, \hyperpage{37}
+  \item {point2d.\+cc}, \hyperpage{56}
+    \subitem {norm}, \hyperpage{58}
+    \subitem {operator$<$$<$}, \hyperpage{59}
+    \subitem {operator$>$$>$}, \hyperpage{60}
+    \subitem {operator$\ast$}, \hyperpage{58}
+    \subitem {operator+}, \hyperpage{59}
+    \subitem {operator-\/}, \hyperpage{59}
+    \subitem {operator/}, \hyperpage{59}
+    \subitem {P\+O\+I\+N\+T2\+D\+\_\+\+CC}, \hyperpage{58}
+    \subitem {round}, \hyperpage{60}
+  \item {point2d.\+h}, \hyperpage{61}
+    \subitem {D\+Point2D}, \hyperpage{63}
+    \subitem {I\+Point2D}, \hyperpage{63}
+    \subitem {norm}, \hyperpage{63}
+    \subitem {operator$<$$<$}, \hyperpage{65}
+    \subitem {operator$>$$>$}, \hyperpage{65}
+    \subitem {operator$\ast$}, \hyperpage{63, 64}
+    \subitem {operator+}, \hyperpage{64}
+    \subitem {operator-\/}, \hyperpage{64}
+    \subitem {operator/}, \hyperpage{64}
+    \subitem {round}, \hyperpage{65}
+
+  \indexspace
+
+  \item {round}
+    \subitem {point2d.\+cc}, \hyperpage{60}
+    \subitem {point2d.\+h}, \hyperpage{65}
+  \item {run}
+    \subitem {I\+O\+Thread}, \hyperpage{32}
+
+  \indexspace
+
+  \item {save\+P\+GM}
+    \subitem {Drawing}, \hyperpage{14}
+  \item {save\+P\+NG}
+    \subitem {Drawing}, \hyperpage{14}
+  \item {save\+P\+PM}
+    \subitem {Drawing}, \hyperpage{14}
+  \item {set\+Sleep\+Time}
+    \subitem {Drawing}, \hyperpage{14}
+  \item {set\+Zoom}
+    \subitem {Draw\+Ops}, \hyperpage{20}
+    \subitem {Draw\+Window}, \hyperpage{27}
+    \subitem {Drawing}, \hyperpage{15}
+  \item {show}
+    \subitem {Drawing}, \hyperpage{15}
+  \item {sig\+Activate}
+    \subitem {Draw\+Ops}, \hyperpage{20}
+  \item {sig\+Allow\+Close}
+    \subitem {I\+O\+Thread}, \hyperpage{32}
+  \item {sig\+Dead}
+    \subitem {Draw\+Ops}, \hyperpage{21}
+  \item {sig\+Size}
+    \subitem {Draw\+Ops}, \hyperpage{21}
+  \item {sig\+Update}
+    \subitem {Draw\+Ops}, \hyperpage{21}
+  \item {sig\+Zoom}
+    \subitem {Draw\+Ops}, \hyperpage{21}
+  \item {skalarprod}
+    \subitem {vec3d.\+h}, \hyperpage{69}
+    \subitem {vec4d.\+h}, \hyperpage{71}
+  \item {sleep}
+    \subitem {I\+O\+Thread}, \hyperpage{32}
+  \item {sleep\+Milli}
+    \subitem {Drawing}, \hyperpage{16}
+
+  \indexspace
+
+  \item {the\+Instance}
+    \subitem {Draw\+Ops}, \hyperpage{22}
+    \subitem {Draw\+Window}, \hyperpage{28}
+    \subitem {I\+O\+Thread}, \hyperpage{33}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Drawing}, \hyperpage{15}
+  \item {update\+If\+Active}
+    \subitem {Draw\+Ops}, \hyperpage{21}
+  \item {usleep}
+    \subitem {I\+O\+Thread}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Vec3D}, \hyperpage{37}
+    \subitem {el}, \hyperpage{39}
+    \subitem {operator+=}, \hyperpage{38}
+    \subitem {Vec3D}, \hyperpage{38}
+  \item {vec3d.\+h}, \hyperpage{66}
+    \subitem {kreuzprod}, \hyperpage{67}
+    \subitem {norm}, \hyperpage{67}
+    \subitem {operator$<$$<$}, \hyperpage{68}
+    \subitem {operator$\ast$}, \hyperpage{68}
+    \subitem {operator+}, \hyperpage{68}
+    \subitem {operator-\/}, \hyperpage{68}
+    \subitem {operator/}, \hyperpage{68}
+    \subitem {skalarprod}, \hyperpage{69}
+  \item {Vec4D}, \hyperpage{39}
+    \subitem {el}, \hyperpage{41}
+    \subitem {Vec4D}, \hyperpage{40}
+  \item {vec4d.\+h}, \hyperpage{69}
+    \subitem {operator$<$$<$}, \hyperpage{71}
+    \subitem {skalarprod}, \hyperpage{71}
+
+  \indexspace
+
+  \item {wait\+For\+Window}
+    \subitem {I\+O\+Thread}, \hyperpage{32}
+
+  \indexspace
+
+  \item {x}
+    \subitem {Point2D}, \hyperpage{37}
+
+  \indexspace
+
+  \item {y}
+    \subitem {Point2D}, \hyperpage{37}
+
+  \indexspace
+
+  \item {zoom}
+    \subitem {Draw\+Window}, \hyperpage{28}
+
+\end{theindex}

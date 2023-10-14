@@ -1,0 +1,198 @@
+1_notes.txt
+
+Ok, wir machen den Lenker
+
+#local Lenker = union {
+
+// HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Er ist das "union" von die Objekte, die wir schon definiert haben, ohne "verbindung"
+}
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#local Lenker = union {
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  object {
+    Gabel
+    translate 15*y
+    rotate 90*y
+  }
+  object {
+    Rad
+  }
+  
+  object { // Griff rechts
+    Griff
+    translate 15*z
+    translate 64*y
+  }
+  object { // Griff links
+    Griff
+    translate 15*z
+    rotate 180*x
+    translate 64*y
+  }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+}
+
++
+
+union { // Roller
+
+   object {
+    Lenker
+    //Was Machen wir mit das parameter LenkerDrehung? --> y
+    //auch  z? 
+  }
+  object {
+    Verbindung
+  }
+  translate 17*y
+}
+
+Es fehlt noch  die Lenkerstange und die Griffstange:
+Sieh "Griff"--> roller.inc
+http://www.povray.org/documentation/view/3.6.2/278/
+
++ parameter: TexturRahmen
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+#local Lenker = union {
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+...
+  cylinder { // Lenkerstange
+    <0,18,0>, <0,64,0>, 1.5
+    texture { TexturRahmen }
+  }
+  cylinder { // Griffstange
+    <0,64,-15>, <0,64,15>, 1.5
+    texture { TexturRahmen }
+  }
+...
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+}
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.

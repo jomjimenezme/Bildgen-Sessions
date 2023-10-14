@@ -1,0 +1,1 @@
+opengl-zbuffer.o opengl-zbuffer.dep : opengl-zbuffer.cc glsupport.h gltypes.h in-reader.h

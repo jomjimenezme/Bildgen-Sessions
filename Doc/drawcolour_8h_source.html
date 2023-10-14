@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016: drawcolour.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.14 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Suchen');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('drawcolour_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">drawcolour.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="drawcolour_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef DRAWCOLOUR_H</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define DRAWCOLOUR_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QColor&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classDrawColour.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDrawColour.html">DrawColour</a> : <span class="keyword">public</span> QColor</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classDrawColour.html#a90d4f5a402f7d5713bde68577a117622">   17</a></span>&#160;  <a class="code" href="classDrawColour.html#a90d4f5a402f7d5713bde68577a117622">DrawColour</a>() : QColor() {}</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classDrawColour.html#a1c59565e58972adcf8c7d4039dcfba12">   20</a></span>&#160;  <a class="code" href="classDrawColour.html#a1c59565e58972adcf8c7d4039dcfba12">DrawColour</a>(<span class="keyword">const</span> QColor&amp; c2) : QColor(c2) {}</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classDrawColour.html#ae1e915e236c257088107e4aeffabfbbb">   23</a></span>&#160;  <a class="code" href="classDrawColour.html#ae1e915e236c257088107e4aeffabfbbb">DrawColour</a>(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b) : QColor(r, g, b) {}</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classDrawColour.html#a723a3d63cba2d7cb7438e9080233b3fd">   26</a></span>&#160;  <a class="code" href="classDrawColour.html#a723a3d63cba2d7cb7438e9080233b3fd">DrawColour</a>(<span class="keywordtype">int</span> gr) : QColor(gr, gr, gr) {}</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;std::ostream&amp; <a class="code" href="drawcolour_8h.html#a6ecc8a8beec53468575ee781cc4eeef7">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classDrawColour.html">DrawColour</a>&amp; dc);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;std::istream&amp; <a class="code" href="drawcolour_8h.html#aa7c6e3160a785c25964e94943d745ff4">operator&gt;&gt;</a>(std::istream&amp; is, <a class="code" href="classDrawColour.html">DrawColour</a>&amp; dc);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classDrawColour_html_a1c59565e58972adcf8c7d4039dcfba12"><div class="ttname"><a href="classDrawColour.html#a1c59565e58972adcf8c7d4039dcfba12">DrawColour::DrawColour</a></div><div class="ttdeci">DrawColour(const QColor &amp;c2)</div><div class="ttdoc">Kopier-Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="drawcolour_8h_source.html#l00020">drawcolour.h:20</a></div></div>
+<div class="ttc" id="drawcolour_8h_html_aa7c6e3160a785c25964e94943d745ff4"><div class="ttname"><a href="drawcolour_8h.html#aa7c6e3160a785c25964e94943d745ff4">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;is, DrawColour &amp;dc)</div><div class="ttdoc">Eingabe der Farbe in der Form (0,0,255) </div></div>
+<div class="ttc" id="classDrawColour_html_a723a3d63cba2d7cb7438e9080233b3fd"><div class="ttname"><a href="classDrawColour.html#a723a3d63cba2d7cb7438e9080233b3fd">DrawColour::DrawColour</a></div><div class="ttdeci">DrawColour(int gr)</div><div class="ttdoc">Konstruktor für Grauwerte. </div><div class="ttdef"><b>Definition:</b> <a href="drawcolour_8h_source.html#l00026">drawcolour.h:26</a></div></div>
+<div class="ttc" id="drawcolour_8h_html_a6ecc8a8beec53468575ee781cc4eeef7"><div class="ttname"><a href="drawcolour_8h.html#a6ecc8a8beec53468575ee781cc4eeef7">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const DrawColour &amp;dc)</div><div class="ttdoc">Ausgabe der Farbe in der Form (0,0,255) </div></div>
+<div class="ttc" id="classDrawColour_html"><div class="ttname"><a href="classDrawColour.html">DrawColour</a></div><div class="ttdoc">Farbklasse. </div><div class="ttdef"><b>Definition:</b> <a href="drawcolour_8h_source.html#l00013">drawcolour.h:13</a></div></div>
+<div class="ttc" id="classDrawColour_html_a90d4f5a402f7d5713bde68577a117622"><div class="ttname"><a href="classDrawColour.html#a90d4f5a402f7d5713bde68577a117622">DrawColour::DrawColour</a></div><div class="ttdeci">DrawColour()</div><div class="ttdoc">Default-Konstruktor: Farbe schwarz. </div><div class="ttdef"><b>Definition:</b> <a href="drawcolour_8h_source.html#l00017">drawcolour.h:17</a></div></div>
+<div class="ttc" id="classDrawColour_html_ae1e915e236c257088107e4aeffabfbbb"><div class="ttname"><a href="classDrawColour.html#ae1e915e236c257088107e4aeffabfbbb">DrawColour::DrawColour</a></div><div class="ttdeci">DrawColour(int r, int g, int b)</div><div class="ttdoc">Konstruktur für RGB-Werte. </div><div class="ttdef"><b>Definition:</b> <a href="drawcolour_8h_source.html#l00023">drawcolour.h:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="drawcolour_8h.html">drawcolour.h</a></li>
+    <li class="footer">Erzeugt am Die Okt 26 2021 17:10:37 für cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016 von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

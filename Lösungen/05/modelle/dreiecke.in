@@ -1,0 +1,6 @@
+ 400  400  400 # COP - Augenposition
+   0    0    0 # TGT - Betrachteter Punkt
+    3            # Anzahl Dreiecke
+  0 200   0    0 200 400  400 200   0  255   0   0
+  0   0 200  400   0 200    0 400 200    0 255   0
+200   0   0  200   0 400  200 400   0    0   0 255

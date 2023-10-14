@@ -1,0 +1,2 @@
+raytracer.o raytracer.dep : raytracer.cc raytracer.h scene.h object.h ray.h hitinfo.h \
+ camera.h light.h visibleinfo.h image.h

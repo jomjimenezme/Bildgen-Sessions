@@ -1,0 +1,394 @@
+\hypertarget{classDrawWindow}{}\subsection{Draw\+Window Klassenreferenz}
+\label{classDrawWindow}\index{Draw\+Window@{Draw\+Window}}
+
+
+Das Fenster zum Anzeigen eines Bildes, verwendet Singleton-\/\+Pattern.  
+
+
+
+
+{\ttfamily \#include $<$drawwindow.\+h$>$}
+
+
+
+Klassendiagramm für Draw\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classDrawWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von Draw\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classDrawWindow__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Öffentliche Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDrawWindow_af504bbe367340f6318003b116f575e29}{set\+Zoom}} (int z)
+\begin{DoxyCompactList}\small\item\em Ändert den Zoomfaktor für die Anzeige. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawWindow_a5f1d223501d8cc95ec5b54b3e8438559}{change\+Size}} (Q\+Wait\+Condition $\ast$changed\+Size)
+\begin{DoxyCompactList}\small\item\em Passt das Fenster an eine geänderte Bildgröße an. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawWindow_a38c094c0d774830ee22b827a4e7e3f31}{change\+Drawing}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$drw, Q\+Wait\+Condition $\ast$made\+Active)
+\begin{DoxyCompactList}\small\item\em Verknüpft das Fenster mit einer anderen Zeichnung. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawWindow_a11ecf08241e0a34806dba95321b4590d}{no\+Drawing}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$drw, Q\+Wait\+Condition $\ast$for\+Deletion)
+\begin{DoxyCompactList}\small\item\em Löst die Verknüpfung des Fensters mit einer Zeichnung, wenn diese gerade angezeigt wird. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawWindow_ab7934ccfbfba2c54c9837fdd5aaec4ea}{allow\+Close}} (Q\+Wait\+Condition $\ast$close\+Window)
+\begin{DoxyCompactList}\small\item\em Aktiviert die Möglichkeit zum Schließen des Fensters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$ \mbox{\hyperlink{classDrawWindow_ab37002c26d9f063023c937f6abf00b1b}{get\+Drawing}} ()
+\begin{DoxyCompactList}\small\item\em Liefert Zeiger auf die aktuell angezeigte Zeichnung. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} $\ast$ \mbox{\hyperlink{classDrawWindow_ad6ccd97298af0331b99587071ba682de}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Liefert Zeiger auf das einzige \mbox{\hyperlink{classDrawWindow}{Draw\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Geschützte Methoden}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classDrawWindow_a453708daf7b29481a75fd6e20636f9fd}{close\+Event}} (Q\+Close\+Event $\ast$ce) override
+\item 
+virtual void \mbox{\hyperlink{classDrawWindow_ad3476b22727042cde867e0fff6f8f8fe}{paint\+Event}} (Q\+Paint\+Event $\ast$pe) override
+\end{DoxyCompactItemize}
+\subsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDrawWindow_a6306ab8ed8304e89d1eb27a356e327a2}{Draw\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Default-\/\+Konstruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawWindow_ac0df14df2085f4bc7d19be0d3b44d2f7}{center}} ()
+\begin{DoxyCompactList}\small\item\em Fenster auf Bildschirm zentrieren. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Wait\+Condition $\ast$ \mbox{\hyperlink{classDrawWindow_aa6f3d1f744277acdbfc121421b0760d7}{allow\+\_\+close}} = nullptr
+\begin{DoxyCompactList}\small\item\em Signalisiert dem \mbox{\hyperlink{classIOThread}{I\+O\+Thread}}, dass das Fenster geschlossen wurde. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$ \mbox{\hyperlink{classDrawWindow_ac63c11339aa1f1b0259699ca68bead6c}{current\+Drw}}
+\begin{DoxyCompactList}\small\item\em Das momentan angezeigte \mbox{\hyperlink{classDrawing}{Drawing}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDrawWindow_a69fa4fea9a23c970cba023ba863340fe}{zoom}}
+\begin{DoxyCompactList}\small\item\em Zoomfaktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Statische, private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} $\ast$ \mbox{\hyperlink{classDrawWindow_a39187946e41c9e9087484cba77e7fd5b}{the\+Instance}} = nullptr
+\begin{DoxyCompactList}\small\item\em Die \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} Instanz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+Das Fenster zum Anzeigen eines Bildes, verwendet Singleton-\/\+Pattern. 
+
+Definiert in Zeile 23 der Datei drawwindow.\+h.
+
+
+
+\subsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classDrawWindow_a6306ab8ed8304e89d1eb27a356e327a2}\label{classDrawWindow_a6306ab8ed8304e89d1eb27a356e327a2}} 
+\index{Draw\+Window@{Draw\+Window}!Draw\+Window@{Draw\+Window}}
+\index{Draw\+Window@{Draw\+Window}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{Draw\+Window()}{DrawWindow()}}
+{\footnotesize\ttfamily Draw\+Window\+::\+Draw\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Default-\/\+Konstruktor. 
+
+
+
+Definiert in Zeile 38 der Datei drawwindow.\+h.
+
+
+
+Benutzt center().
+
+
+
+Wird benutzt von get\+Instance().
+
+
+
+\subsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classDrawWindow_ab7934ccfbfba2c54c9837fdd5aaec4ea}\label{classDrawWindow_ab7934ccfbfba2c54c9837fdd5aaec4ea}} 
+\index{Draw\+Window@{Draw\+Window}!allow\+Close@{allow\+Close}}
+\index{allow\+Close@{allow\+Close}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{allow\+Close}{allowClose}}
+{\footnotesize\ttfamily void Draw\+Window\+::allow\+Close (\begin{DoxyParamCaption}\item[{Q\+Wait\+Condition $\ast$}]{close\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Aktiviert die Möglichkeit zum Schließen des Fensters. 
+
+
+
+Definiert in Zeile 112 der Datei drawwindow.\+cc.
+
+
+
+Benutzt allow\+\_\+close.
+
+
+
+Wird benutzt von main().
+
+\mbox{\Hypertarget{classDrawWindow_ac0df14df2085f4bc7d19be0d3b44d2f7}\label{classDrawWindow_ac0df14df2085f4bc7d19be0d3b44d2f7}} 
+\index{Draw\+Window@{Draw\+Window}!center@{center}}
+\index{center@{center}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{center()}{center()}}
+{\footnotesize\ttfamily void Draw\+Window\+::center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fenster auf Bildschirm zentrieren. 
+
+
+
+Definiert in Zeile 15 der Datei drawwindow.\+cc.
+
+
+
+Wird benutzt von change\+Drawing() und Draw\+Window().
+
+\mbox{\Hypertarget{classDrawWindow_a38c094c0d774830ee22b827a4e7e3f31}\label{classDrawWindow_a38c094c0d774830ee22b827a4e7e3f31}} 
+\index{Draw\+Window@{Draw\+Window}!change\+Drawing@{change\+Drawing}}
+\index{change\+Drawing@{change\+Drawing}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{change\+Drawing}{changeDrawing}}
+{\footnotesize\ttfamily void Draw\+Window\+::change\+Drawing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{drw,  }\item[{Q\+Wait\+Condition $\ast$}]{made\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Verknüpft das Fenster mit einer anderen Zeichnung. 
+
+
+
+Definiert in Zeile 87 der Datei drawwindow.\+cc.
+
+
+
+Benutzt center(), current\+Drw, Drawing\+::get\+Height(), Drawing\+::get\+Width() und zoom.
+
+
+
+Wird benutzt von main().
+
+\mbox{\Hypertarget{classDrawWindow_a5f1d223501d8cc95ec5b54b3e8438559}\label{classDrawWindow_a5f1d223501d8cc95ec5b54b3e8438559}} 
+\index{Draw\+Window@{Draw\+Window}!change\+Size@{change\+Size}}
+\index{change\+Size@{change\+Size}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{change\+Size}{changeSize}}
+{\footnotesize\ttfamily void Draw\+Window\+::change\+Size (\begin{DoxyParamCaption}\item[{Q\+Wait\+Condition $\ast$}]{changed\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Passt das Fenster an eine geänderte Bildgröße an. 
+
+
+
+Definiert in Zeile 77 der Datei drawwindow.\+cc.
+
+
+
+Benutzt current\+Drw, Drawing\+::get\+Height(), Drawing\+::get\+Width() und zoom.
+
+
+
+Wird benutzt von main().
+
+\mbox{\Hypertarget{classDrawWindow_a453708daf7b29481a75fd6e20636f9fd}\label{classDrawWindow_a453708daf7b29481a75fd6e20636f9fd}} 
+\index{Draw\+Window@{Draw\+Window}!close\+Event@{close\+Event}}
+\index{close\+Event@{close\+Event}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{close\+Event()}{closeEvent()}}
+{\footnotesize\ttfamily void Draw\+Window\+::close\+Event (\begin{DoxyParamCaption}\item[{Q\+Close\+Event $\ast$}]{ce }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definiert in Zeile 27 der Datei drawwindow.\+cc.
+
+
+
+Benutzt allow\+\_\+close.
+
+\mbox{\Hypertarget{classDrawWindow_ab37002c26d9f063023c937f6abf00b1b}\label{classDrawWindow_ab37002c26d9f063023c937f6abf00b1b}} 
+\index{Draw\+Window@{Draw\+Window}!get\+Drawing@{get\+Drawing}}
+\index{get\+Drawing@{get\+Drawing}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{get\+Drawing()}{getDrawing()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classDrawing}{Drawing}}$\ast$ Draw\+Window\+::get\+Drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Liefert Zeiger auf die aktuell angezeigte Zeichnung. 
+
+
+
+Definiert in Zeile 61 der Datei drawwindow.\+h.
+
+
+
+Benutzt current\+Drw.
+
+\mbox{\Hypertarget{classDrawWindow_ad6ccd97298af0331b99587071ba682de}\label{classDrawWindow_ad6ccd97298af0331b99587071ba682de}} 
+\index{Draw\+Window@{Draw\+Window}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} $\ast$ Draw\+Window\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Liefert Zeiger auf das einzige \mbox{\hyperlink{classDrawWindow}{Draw\+Window}}. 
+
+
+
+Definiert in Zeile 55 der Datei drawwindow.\+cc.
+
+
+
+Benutzt Draw\+Window() und the\+Instance.
+
+
+
+Wird benutzt von main(), Drawing\+::set\+Zoom() und Draw\+Ops\+::update\+If\+Active().
+
+\mbox{\Hypertarget{classDrawWindow_a11ecf08241e0a34806dba95321b4590d}\label{classDrawWindow_a11ecf08241e0a34806dba95321b4590d}} 
+\index{Draw\+Window@{Draw\+Window}!no\+Drawing@{no\+Drawing}}
+\index{no\+Drawing@{no\+Drawing}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{no\+Drawing}{noDrawing}}
+{\footnotesize\ttfamily void Draw\+Window\+::no\+Drawing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{drw,  }\item[{Q\+Wait\+Condition $\ast$}]{for\+Deletion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Löst die Verknüpfung des Fensters mit einer Zeichnung, wenn diese gerade angezeigt wird. 
+
+
+
+Definiert in Zeile 102 der Datei drawwindow.\+cc.
+
+
+
+Benutzt current\+Drw.
+
+
+
+Wird benutzt von main().
+
+\mbox{\Hypertarget{classDrawWindow_ad3476b22727042cde867e0fff6f8f8fe}\label{classDrawWindow_ad3476b22727042cde867e0fff6f8f8fe}} 
+\index{Draw\+Window@{Draw\+Window}!paint\+Event@{paint\+Event}}
+\index{paint\+Event@{paint\+Event}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{paint\+Event()}{paintEvent()}}
+{\footnotesize\ttfamily void Draw\+Window\+::paint\+Event (\begin{DoxyParamCaption}\item[{Q\+Paint\+Event $\ast$}]{pe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definiert in Zeile 35 der Datei drawwindow.\+cc.
+
+
+
+Benutzt current\+Drw, Drawing\+::get\+Image(), Drawing\+::get\+Mutex() und zoom.
+
+\mbox{\Hypertarget{classDrawWindow_af504bbe367340f6318003b116f575e29}\label{classDrawWindow_af504bbe367340f6318003b116f575e29}} 
+\index{Draw\+Window@{Draw\+Window}!set\+Zoom@{set\+Zoom}}
+\index{set\+Zoom@{set\+Zoom}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{set\+Zoom}{setZoom}}
+{\footnotesize\ttfamily void Draw\+Window\+::set\+Zoom (\begin{DoxyParamCaption}\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Ändert den Zoomfaktor für die Anzeige. 
+
+
+
+Definiert in Zeile 62 der Datei drawwindow.\+cc.
+
+
+
+Benutzt current\+Drw, Drawing\+::get\+Height(), Drawing\+::get\+Width() und zoom.
+
+
+
+Wird benutzt von main().
+
+
+
+\subsubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classDrawWindow_aa6f3d1f744277acdbfc121421b0760d7}\label{classDrawWindow_aa6f3d1f744277acdbfc121421b0760d7}} 
+\index{Draw\+Window@{Draw\+Window}!allow\+\_\+close@{allow\+\_\+close}}
+\index{allow\+\_\+close@{allow\+\_\+close}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{allow\+\_\+close}{allow\_close}}
+{\footnotesize\ttfamily Q\+Wait\+Condition$\ast$ Draw\+Window\+::allow\+\_\+close = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Signalisiert dem \mbox{\hyperlink{classIOThread}{I\+O\+Thread}}, dass das Fenster geschlossen wurde. 
+
+
+
+Definiert in Zeile 31 der Datei drawwindow.\+h.
+
+
+
+Wird benutzt von allow\+Close() und close\+Event().
+
+\mbox{\Hypertarget{classDrawWindow_ac63c11339aa1f1b0259699ca68bead6c}\label{classDrawWindow_ac63c11339aa1f1b0259699ca68bead6c}} 
+\index{Draw\+Window@{Draw\+Window}!current\+Drw@{current\+Drw}}
+\index{current\+Drw@{current\+Drw}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{current\+Drw}{currentDrw}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classDrawing}{Drawing}}$\ast$ Draw\+Window\+::current\+Drw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Das momentan angezeigte \mbox{\hyperlink{classDrawing}{Drawing}}. 
+
+
+
+Definiert in Zeile 33 der Datei drawwindow.\+h.
+
+
+
+Wird benutzt von change\+Drawing(), change\+Size(), get\+Drawing(), no\+Drawing(), paint\+Event() und set\+Zoom().
+
+\mbox{\Hypertarget{classDrawWindow_a39187946e41c9e9087484cba77e7fd5b}\label{classDrawWindow_a39187946e41c9e9087484cba77e7fd5b}} 
+\index{Draw\+Window@{Draw\+Window}!the\+Instance@{the\+Instance}}
+\index{the\+Instance@{the\+Instance}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{the\+Instance}{theInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} $\ast$ Draw\+Window\+::the\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Die \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} Instanz. 
+
+
+
+Definiert in Zeile 29 der Datei drawwindow.\+h.
+
+
+
+Wird benutzt von get\+Instance().
+
+\mbox{\Hypertarget{classDrawWindow_a69fa4fea9a23c970cba023ba863340fe}\label{classDrawWindow_a69fa4fea9a23c970cba023ba863340fe}} 
+\index{Draw\+Window@{Draw\+Window}!zoom@{zoom}}
+\index{zoom@{zoom}!Draw\+Window@{Draw\+Window}}
+\paragraph{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily int Draw\+Window\+::zoom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zoomfaktor. 
+
+
+
+Definiert in Zeile 35 der Datei drawwindow.\+h.
+
+
+
+Wird benutzt von change\+Drawing(), change\+Size(), paint\+Event() und set\+Zoom().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{drawwindow_8h}{drawwindow.\+h}}\item 
+\mbox{\hyperlink{drawwindow_8cc}{drawwindow.\+cc}}\end{DoxyCompactItemize}

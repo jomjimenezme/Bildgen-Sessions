@@ -1,0 +1,22 @@
+
+Der Raytracer benötigt:
+  - einen C++11 Compiler (getestet mit GCC (4.8.3, 5.3.1) und Clang (3.5.0))
+  - Eigen3 (auf CIP-Rechner installiert (3.2.2), http://eigen.tuxfamily.org)
+
+Einschränkungen:
+  Für die Licht brechenden Objekte gibt es im Wesentlichen die Einschränkungen,
+  dass
+    - sie Schatten werfen, weil die Strahlverfolgung von Oberfläche zur 
+      Lichtquelle einfach gestaltet ist, und
+    - sie nur einen Strahl im Inneren zu dessen Austrittsort verfolgen,
+      also keine Totalreflektion simulieren können, was zu Bereichen
+      führt, in denen einfach die Hintergrundfarbe gesetzt wird.
+
+Zum Compilieren:
+  make
+
+Ausführen:
+  ./scene_*
+
+Ergebnis ansehen:
+  display scene_*.png

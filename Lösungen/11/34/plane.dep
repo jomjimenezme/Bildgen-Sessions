@@ -1,0 +1,1 @@
+plane.o plane.dep : plane.cc plane.h ray.h object.h hitinfo.h

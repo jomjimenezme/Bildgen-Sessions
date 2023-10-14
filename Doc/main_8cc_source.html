@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016: main.cc Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.14 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Suchen');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('main_8cc_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cc.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QWaitCondition&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="drawing_8h.html">drawing.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="drawops_8h.html">drawops.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="drawwindow_8h.html">drawwindow.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iothread_8h.html">iothread.h</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="maindraw_8h.html">maindraw.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">   17</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  QApplication drawApp(argc, argv);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classIOThread.html">IOThread</a>* ioThr;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classDrawOps.html">DrawOps</a>* drawOps;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classDrawWindow.html">DrawWindow</a>* drawWin;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  ioThr = <a class="code" href="classIOThread.html#a99c8f19b8b37cc58f0d7b7458de7631e">IOThread::getInstance</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  drawOps = <a class="code" href="classDrawOps.html#a2f59844de416f8d3ca4a2a63ccefb0cd">DrawOps::getInstance</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  drawWin = <a class="code" href="classDrawWindow.html#ad6ccd97298af0331b99587071ba682de">DrawWindow::getInstance</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// Der Umweg über QueuedConnections ist notwendig, da der X-Server es nicht</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">// mag, wenn Graphikoperationen von anderen Threads als dem GUI-Thread</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// ausgelöst werden.</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// # Auto connection is the default and falls back to either direct</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// # connection or queued connection, depending on whether the signal</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// # is emitted in the same thread that owns the receiving object. MG</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  QObject::connect(drawOps, &amp;<a class="code" href="classDrawOps.html#a42489500245289165f927bcd9891c9bf">DrawOps::sigZoom</a>, drawWin, &amp;<a class="code" href="classDrawWindow.html#af504bbe367340f6318003b116f575e29">DrawWindow::setZoom</a>,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                   Qt::QueuedConnection);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  QObject::connect(drawOps, &amp;<a class="code" href="classDrawOps.html#a54f8abd3bf4ec1a3dbd22cdf6c1bd6b7">DrawOps::sigActivate</a>, drawWin,</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                   &amp;<a class="code" href="classDrawWindow.html#a38c094c0d774830ee22b827a4e7e3f31">DrawWindow::changeDrawing</a>, Qt::QueuedConnection);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  QObject::connect(drawOps, &amp;<a class="code" href="classDrawOps.html#a2e49eface451924dbcf4b5687285ab88">DrawOps::sigSize</a>, drawWin, &amp;<a class="code" href="classDrawWindow.html#a5f1d223501d8cc95ec5b54b3e8438559">DrawWindow::changeSize</a>,</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                   Qt::QueuedConnection);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  QObject::connect(drawOps, &amp;<a class="code" href="classDrawOps.html#a274f32dcc53300fc594ab5683a0e2071">DrawOps::sigUpdate</a>, drawWin,</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                   <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span> (<a class="code" href="classDrawWindow.html">DrawWindow</a>::*)()<span class="keyword">&gt;</span>(&amp;DrawWindow::update),</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                   Qt::QueuedConnection);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  QObject::connect(drawOps, &amp;<a class="code" href="classDrawOps.html#ad121a0a6a2c1f022216b44159c022c0a">DrawOps::sigDead</a>, drawWin, &amp;<a class="code" href="classDrawWindow.html#a11ecf08241e0a34806dba95321b4590d">DrawWindow::noDrawing</a>,</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                   Qt::QueuedConnection);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  QObject::connect(ioThr, &amp;IOThread::finished, &amp;drawApp, &amp;QApplication::quit,</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                   Qt::QueuedConnection);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  QObject::connect(ioThr, &amp;<a class="code" href="classIOThread.html#a54c13ad95a4121f8350490f3498e3441">IOThread::sigAllowClose</a>, drawWin, &amp;<a class="code" href="classDrawWindow.html#ab7934ccfbfba2c54c9837fdd5aaec4ea">DrawWindow::allowClose</a>,</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                   Qt::QueuedConnection);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// Alternativ könnte das Fenster weiterhin alle closeEvents ignorieren.</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// Der IOThread würde dann die Zwangschließung üebrnehmen.</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  qApp-&gt;setQuitOnLastWindowClosed(<span class="keyword">false</span>);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  ioThr-&gt;start();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  drawApp.exec();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  ioThr-&gt;wait();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div><div class="ttc" id="classDrawOps_html"><div class="ttname"><a href="classDrawOps.html">DrawOps</a></div><div class="ttdoc">Klasse zur Bereitstellung von Zeichenoperationen und zur Kommunikation mit dem Zeichenfenster. </div><div class="ttdef"><b>Definition:</b> <a href="drawops_8h_source.html#l00018">drawops.h:18</a></div></div>
+<div class="ttc" id="classDrawOps_html_a2e49eface451924dbcf4b5687285ab88"><div class="ttname"><a href="classDrawOps.html#a2e49eface451924dbcf4b5687285ab88">DrawOps::sigSize</a></div><div class="ttdeci">void sigSize(QWaitCondition *changedSize)</div></div>
+<div class="ttc" id="drawops_8h_html"><div class="ttname"><a href="drawops_8h.html">drawops.h</a></div></div>
+<div class="ttc" id="classDrawWindow_html_a5f1d223501d8cc95ec5b54b3e8438559"><div class="ttname"><a href="classDrawWindow.html#a5f1d223501d8cc95ec5b54b3e8438559">DrawWindow::changeSize</a></div><div class="ttdeci">void changeSize(QWaitCondition *changedSize)</div><div class="ttdoc">Passt das Fenster an eine geänderte Bildgröße an. </div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8cc_source.html#l00077">drawwindow.cc:77</a></div></div>
+<div class="ttc" id="classDrawOps_html_a2f59844de416f8d3ca4a2a63ccefb0cd"><div class="ttname"><a href="classDrawOps.html#a2f59844de416f8d3ca4a2a63ccefb0cd">DrawOps::getInstance</a></div><div class="ttdeci">static DrawOps * getInstance()</div><div class="ttdoc">Liefert Zeiger auf die einzige DrawOps-Instanz. </div><div class="ttdef"><b>Definition:</b> <a href="drawops_8cc_source.html#l00014">drawops.cc:14</a></div></div>
+<div class="ttc" id="classDrawWindow_html"><div class="ttname"><a href="classDrawWindow.html">DrawWindow</a></div><div class="ttdoc">Das Fenster zum Anzeigen eines Bildes, verwendet Singleton-Pattern. </div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8h_source.html#l00023">drawwindow.h:23</a></div></div>
+<div class="ttc" id="iothread_8h_html"><div class="ttname"><a href="iothread_8h.html">iothread.h</a></div></div>
+<div class="ttc" id="classDrawWindow_html_ad6ccd97298af0331b99587071ba682de"><div class="ttname"><a href="classDrawWindow.html#ad6ccd97298af0331b99587071ba682de">DrawWindow::getInstance</a></div><div class="ttdeci">static DrawWindow * getInstance()</div><div class="ttdoc">Liefert Zeiger auf das einzige DrawWindow. </div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8cc_source.html#l00055">drawwindow.cc:55</a></div></div>
+<div class="ttc" id="classDrawOps_html_ad121a0a6a2c1f022216b44159c022c0a"><div class="ttname"><a href="classDrawOps.html#ad121a0a6a2c1f022216b44159c022c0a">DrawOps::sigDead</a></div><div class="ttdeci">void sigDead(const Drawing *drw, QWaitCondition *forDeletion)</div></div>
+<div class="ttc" id="classDrawOps_html_a274f32dcc53300fc594ab5683a0e2071"><div class="ttname"><a href="classDrawOps.html#a274f32dcc53300fc594ab5683a0e2071">DrawOps::sigUpdate</a></div><div class="ttdeci">void sigUpdate()</div></div>
+<div class="ttc" id="maindraw_8h_html"><div class="ttname"><a href="maindraw_8h.html">maindraw.h</a></div></div>
+<div class="ttc" id="drawwindow_8h_html"><div class="ttname"><a href="drawwindow_8h.html">drawwindow.h</a></div></div>
+<div class="ttc" id="classIOThread_html_a54c13ad95a4121f8350490f3498e3441"><div class="ttname"><a href="classIOThread.html#a54c13ad95a4121f8350490f3498e3441">IOThread::sigAllowClose</a></div><div class="ttdeci">void sigAllowClose(QWaitCondition *closeWindow)</div><div class="ttdoc">Signalisiert dem Fenster das manuelle Schließen zuzulassen. </div></div>
+<div class="ttc" id="drawing_8h_html"><div class="ttname"><a href="drawing_8h.html">drawing.h</a></div></div>
+<div class="ttc" id="main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">Dieses Hauptprogramm ist für alle Draw-Programme fest. </div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00017">main.cc:17</a></div></div>
+<div class="ttc" id="classDrawOps_html_a42489500245289165f927bcd9891c9bf"><div class="ttname"><a href="classDrawOps.html#a42489500245289165f927bcd9891c9bf">DrawOps::sigZoom</a></div><div class="ttdeci">void sigZoom(int z)</div></div>
+<div class="ttc" id="classIOThread_html_a99c8f19b8b37cc58f0d7b7458de7631e"><div class="ttname"><a href="classIOThread.html#a99c8f19b8b37cc58f0d7b7458de7631e">IOThread::getInstance</a></div><div class="ttdeci">static IOThread * getInstance()</div><div class="ttdoc">Gibt die IOThread Instanz zurück. </div><div class="ttdef"><b>Definition:</b> <a href="iothread_8h_source.html#l00058">iothread.h:58</a></div></div>
+<div class="ttc" id="classDrawWindow_html_ab7934ccfbfba2c54c9837fdd5aaec4ea"><div class="ttname"><a href="classDrawWindow.html#ab7934ccfbfba2c54c9837fdd5aaec4ea">DrawWindow::allowClose</a></div><div class="ttdeci">void allowClose(QWaitCondition *closeWindow)</div><div class="ttdoc">Aktiviert die Möglichkeit zum Schließen des Fensters. </div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8cc_source.html#l00112">drawwindow.cc:112</a></div></div>
+<div class="ttc" id="classDrawWindow_html_a38c094c0d774830ee22b827a4e7e3f31"><div class="ttname"><a href="classDrawWindow.html#a38c094c0d774830ee22b827a4e7e3f31">DrawWindow::changeDrawing</a></div><div class="ttdeci">void changeDrawing(const Drawing *drw, QWaitCondition *madeActive)</div><div class="ttdoc">Verknüpft das Fenster mit einer anderen Zeichnung. </div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8cc_source.html#l00087">drawwindow.cc:87</a></div></div>
+<div class="ttc" id="classDrawOps_html_a54f8abd3bf4ec1a3dbd22cdf6c1bd6b7"><div class="ttname"><a href="classDrawOps.html#a54f8abd3bf4ec1a3dbd22cdf6c1bd6b7">DrawOps::sigActivate</a></div><div class="ttdeci">void sigActivate(const Drawing *drw, QWaitCondition *madeActive)</div></div>
+<div class="ttc" id="classDrawWindow_html_af504bbe367340f6318003b116f575e29"><div class="ttname"><a href="classDrawWindow.html#af504bbe367340f6318003b116f575e29">DrawWindow::setZoom</a></div><div class="ttdeci">void setZoom(int z)</div><div class="ttdoc">Ändert den Zoomfaktor für die Anzeige. </div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8cc_source.html#l00062">drawwindow.cc:62</a></div></div>
+<div class="ttc" id="classDrawWindow_html_a11ecf08241e0a34806dba95321b4590d"><div class="ttname"><a href="classDrawWindow.html#a11ecf08241e0a34806dba95321b4590d">DrawWindow::noDrawing</a></div><div class="ttdeci">void noDrawing(const Drawing *drw, QWaitCondition *forDeletion)</div><div class="ttdoc">Löst die Verknüpfung des Fensters mit einer Zeichnung, wenn diese gerade angezeigt wird...</div><div class="ttdef"><b>Definition:</b> <a href="drawwindow_8cc_source.html#l00102">drawwindow.cc:102</a></div></div>
+<div class="ttc" id="classIOThread_html"><div class="ttname"><a href="classIOThread.html">IOThread</a></div><div class="ttdoc">Der Thread, der in der Kommandoshell läuft; verwendet Singleton-Pattern. </div><div class="ttdef"><b>Definition:</b> <a href="iothread_8h_source.html#l00019">iothread.h:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="main_8cc.html">main.cc</a></li>
+    <li class="footer">Erzeugt am Die Okt 26 2021 17:10:37 für cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016 von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

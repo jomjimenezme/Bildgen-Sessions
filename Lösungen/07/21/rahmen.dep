@@ -1,0 +1,1 @@
+rahmen.o rahmen.dep : rahmen.cc glsupport.h gltypes.h in-reader.h

@@ -1,0 +1,259 @@
+\hypertarget{point2d_8cc}{}\subsection{point2d.\+cc-\/\+Dateireferenz}
+\label{point2d_8cc}\index{point2d.\+cc@{point2d.\+cc}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}point2d.\+h\char`\"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für point2d.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{point2d_8cc__incl}
+\end{center}
+\end{figure}
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{point2d_8cc__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{point2d_8cc_a197435e661abd98b166626bfdc1f5b0b}{P\+O\+I\+N\+T2\+D\+\_\+\+CC}}
+\end{DoxyCompactItemize}
+\subsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{point2d_8cc_ac1b45ff5588debf8b85c8e39269fd28c}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Ausgabe eines Punktes in der Form (2,3) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::istream \& \mbox{\hyperlink{point2d_8cc_aa6e53ae39aacc4fe1932cee23e1401b5}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Eingabe eines Punktes in der Form (2,3) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ int $>$ \mbox{\hyperlink{point2d_8cc_a3f28176f30a4d77c865ff68fc618a4cd}{round}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Rundung auf Integer-\/\+Punkte. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \mbox{\hyperlink{point2d_8cc_a1788d6fd779aaa5164a8dad36e00ae03}{operator+}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p1, const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p2)
+\begin{DoxyCompactList}\small\item\em Vektor plus Vektor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \mbox{\hyperlink{point2d_8cc_ad7d601d3d652058efe933187f7cc303c}{operator-\/}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p1, const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p2)
+\begin{DoxyCompactList}\small\item\em Vektor minus Vektor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \mbox{\hyperlink{point2d_8cc_aeb12c0425d454f0aedd1901f15422e38}{operator$\ast$}} (T a, const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Skalar mal Vektor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \mbox{\hyperlink{point2d_8cc_a9817bf6776be3c368bc68d135b55efa3}{operator$\ast$}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p, T a)
+\begin{DoxyCompactList}\small\item\em Vektor mal Skalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \mbox{\hyperlink{point2d_8cc_ad90f188d79645366db48c39863cd866b}{operator/}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p, T a)
+\begin{DoxyCompactList}\small\item\em Vektor durch Skalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\double \mbox{\hyperlink{point2d_8cc_ad829e9fb3c40214e67805f70122a6d6c}{norm}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Vektornorm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\double \mbox{\hyperlink{point2d_8cc_acb494caacee84741c53df9e3d1c906cf}{norm}} (const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ int $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Vektornorm, Variante für int-\/\+Punkte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+\begin{DoxyAuthor}{Autor}
+Holger Arndt 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+4 
+\end{DoxyVersion}
+\begin{DoxyDate}{Datum}
+15.\+09.\+2015 
+\end{DoxyDate}
+
+
+\subsubsection{Makro-\/\+Dokumentation}
+\mbox{\Hypertarget{point2d_8cc_a197435e661abd98b166626bfdc1f5b0b}\label{point2d_8cc_a197435e661abd98b166626bfdc1f5b0b}} 
+\index{point2d.\+cc@{point2d.\+cc}!P\+O\+I\+N\+T2\+D\+\_\+\+CC@{P\+O\+I\+N\+T2\+D\+\_\+\+CC}}
+\index{P\+O\+I\+N\+T2\+D\+\_\+\+CC@{P\+O\+I\+N\+T2\+D\+\_\+\+CC}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{P\+O\+I\+N\+T2\+D\+\_\+\+CC}{POINT2D\_CC}}
+{\footnotesize\ttfamily \#define P\+O\+I\+N\+T2\+D\+\_\+\+CC}
+
+
+
+Definiert in Zeile 7 der Datei point2d.\+cc.
+
+
+
+\subsubsection{Dokumentation der Funktionen}
+\mbox{\Hypertarget{point2d_8cc_ad829e9fb3c40214e67805f70122a6d6c}\label{point2d_8cc_ad829e9fb3c40214e67805f70122a6d6c}} 
+\index{point2d.\+cc@{point2d.\+cc}!norm@{norm}}
+\index{norm@{norm}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{norm()}{norm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double norm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Vektornorm. 
+
+
+
+Definiert in Zeile 59 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_acb494caacee84741c53df9e3d1c906cf}\label{point2d_8cc_acb494caacee84741c53df9e3d1c906cf}} 
+\index{point2d.\+cc@{point2d.\+cc}!norm@{norm}}
+\index{norm@{norm}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{norm()}{norm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+double norm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ int $>$ \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vektornorm, Variante für int-\/\+Punkte. 
+
+
+
+Definiert in Zeile 63 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_aeb12c0425d454f0aedd1901f15422e38}\label{point2d_8cc_aeb12c0425d454f0aedd1901f15422e38}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPoint2D}{Point2D}}$<$T$>$ operator$\ast$ (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Skalar mal Vektor. 
+
+
+
+Definiert in Zeile 47 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_a9817bf6776be3c368bc68d135b55efa3}\label{point2d_8cc_a9817bf6776be3c368bc68d135b55efa3}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPoint2D}{Point2D}}$<$T$>$ operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p,  }\item[{T}]{a }\end{DoxyParamCaption})}
+
+
+
+Vektor mal Skalar. 
+
+
+
+Definiert in Zeile 51 der Datei point2d.\+cc.
+
+\mbox{\Hypertarget{point2d_8cc_a1788d6fd779aaa5164a8dad36e00ae03}\label{point2d_8cc_a1788d6fd779aaa5164a8dad36e00ae03}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator+@{operator+}}
+\index{operator+@{operator+}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPoint2D}{Point2D}}$<$T$>$ operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p1,  }\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Vektor plus Vektor. 
+
+
+
+Definiert in Zeile 39 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_ad7d601d3d652058efe933187f7cc303c}\label{point2d_8cc_ad7d601d3d652058efe933187f7cc303c}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPoint2D}{Point2D}}$<$T$>$ operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p1,  }\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Vektor minus Vektor. 
+
+
+
+Definiert in Zeile 43 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_ad90f188d79645366db48c39863cd866b}\label{point2d_8cc_ad90f188d79645366db48c39863cd866b}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator/@{operator/}}
+\index{operator/@{operator/}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPoint2D}{Point2D}}$<$T$>$ operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p,  }\item[{T}]{a }\end{DoxyParamCaption})}
+
+
+
+Vektor durch Skalar. 
+
+
+
+Definiert in Zeile 55 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_ac1b45ff5588debf8b85c8e39269fd28c}\label{point2d_8cc_ac1b45ff5588debf8b85c8e39269fd28c}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Ausgabe eines Punktes in der Form (2,3) 
+
+
+
+Definiert in Zeile 14 der Datei point2d.\+cc.
+
+\mbox{\Hypertarget{point2d_8cc_aa6e53ae39aacc4fe1932cee23e1401b5}\label{point2d_8cc_aa6e53ae39aacc4fe1932cee23e1401b5}} 
+\index{point2d.\+cc@{point2d.\+cc}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Eingabe eines Punktes in der Form (2,3) 
+
+
+
+Definiert in Zeile 21 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{point2d_8cc_a3f28176f30a4d77c865ff68fc618a4cd}\label{point2d_8cc_a3f28176f30a4d77c865ff68fc618a4cd}} 
+\index{point2d.\+cc@{point2d.\+cc}!round@{round}}
+\index{round@{round}!point2d.\+cc@{point2d.\+cc}}
+\paragraph{\texorpdfstring{round()}{round()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPoint2D}{Point2D}}$<$int$>$ round (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint2D}{Point2D}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Rundung auf Integer-\/\+Punkte. 
+
+
+
+Definiert in Zeile 32 der Datei point2d.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+

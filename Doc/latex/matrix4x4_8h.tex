@@ -1,0 +1,79 @@
+\hypertarget{matrix4x4_8h}{}\subsection{matrix4x4.\+h-\/\+Dateireferenz}
+\label{matrix4x4_8h}\index{matrix4x4.\+h@{matrix4x4.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vec4d.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für matrix4x4.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{matrix4x4_8h__incl}
+\end{center}
+\end{figure}
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{matrix4x4_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Klassen}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}}
+\begin{DoxyCompactList}\small\item\em 4x4-\/\+Matrix, dient auch als Transformationsmatrix für 3\+D-\/\+Vektoren mit homogenen Koordinaten \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{matrix4x4_8h_a88f03eeccdcb2470892a7a9d6b337d44}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&t)
+\begin{DoxyCompactList}\small\item\em Zeilenweise Ausgabe einer Matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \mbox{\hyperlink{matrix4x4_8h_ad9bd542d45842535ee38455af717c029}{operator$\ast$}} (const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&t1, const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&t2)
+\begin{DoxyCompactList}\small\item\em Matrix-\/\+Matrix-\/\+Multiplikation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVec4D}{Vec4D}} \mbox{\hyperlink{matrix4x4_8h_ac32439a87d62beb6e51da40f23f9f6a2}{operator$\ast$}} (const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&t, const \mbox{\hyperlink{classVec4D}{Vec4D}} \&v)
+\begin{DoxyCompactList}\small\item\em Matrix-\/\+Vektor-\/\+Multiplikation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+\begin{DoxyAuthor}{Autor}
+Holger Arndt, Sebastian Birk, Martin Galgon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Datum}
+10.\+11.\+2016 
+\end{DoxyDate}
+
+
+\subsubsection{Dokumentation der Funktionen}
+\mbox{\Hypertarget{matrix4x4_8h_ad9bd542d45842535ee38455af717c029}\label{matrix4x4_8h_ad9bd542d45842535ee38455af717c029}} 
+\index{matrix4x4.\+h@{matrix4x4.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!matrix4x4.\+h@{matrix4x4.\+h}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&}]{t1,  }\item[{const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&}]{t2 }\end{DoxyParamCaption})}
+
+
+
+Matrix-\/\+Matrix-\/\+Multiplikation. 
+
+\mbox{\Hypertarget{matrix4x4_8h_ac32439a87d62beb6e51da40f23f9f6a2}\label{matrix4x4_8h_ac32439a87d62beb6e51da40f23f9f6a2}} 
+\index{matrix4x4.\+h@{matrix4x4.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!matrix4x4.\+h@{matrix4x4.\+h}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec4D}{Vec4D}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&}]{t,  }\item[{const \mbox{\hyperlink{classVec4D}{Vec4D}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Matrix-\/\+Vektor-\/\+Multiplikation. 
+
+\mbox{\Hypertarget{matrix4x4_8h_a88f03eeccdcb2470892a7a9d6b337d44}\label{matrix4x4_8h_a88f03eeccdcb2470892a7a9d6b337d44}} 
+\index{matrix4x4.\+h@{matrix4x4.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix4x4.\+h@{matrix4x4.\+h}}
+\paragraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classMatrix4x4}{Matrix4x4}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+Zeilenweise Ausgabe einer Matrix. 
+

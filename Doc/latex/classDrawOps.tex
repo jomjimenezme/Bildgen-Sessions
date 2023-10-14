@@ -1,0 +1,306 @@
+\hypertarget{classDrawOps}{}\subsection{Draw\+Ops Klassenreferenz}
+\label{classDrawOps}\index{Draw\+Ops@{Draw\+Ops}}
+
+
+Klasse zur Bereitstellung von Zeichenoperationen und zur Kommunikation mit dem Zeichenfenster.  
+
+
+
+
+{\ttfamily \#include $<$drawops.\+h$>$}
+
+
+
+Klassendiagramm für Draw\+Ops\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classDrawOps__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Zusammengehörigkeiten von Draw\+Ops\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classDrawOps__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Signale}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDrawOps_a42489500245289165f927bcd9891c9bf}{sig\+Zoom}} (int z)
+\item 
+void \mbox{\hyperlink{classDrawOps_a54f8abd3bf4ec1a3dbd22cdf6c1bd6b7}{sig\+Activate}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$drw, Q\+Wait\+Condition $\ast$made\+Active)
+\item 
+void \mbox{\hyperlink{classDrawOps_a2e49eface451924dbcf4b5687285ab88}{sig\+Size}} (Q\+Wait\+Condition $\ast$changed\+Size)
+\item 
+void \mbox{\hyperlink{classDrawOps_a274f32dcc53300fc594ab5683a0e2071}{sig\+Update}} ()
+\item 
+void \mbox{\hyperlink{classDrawOps_ad121a0a6a2c1f022216b44159c022c0a}{sig\+Dead}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$drw, Q\+Wait\+Condition $\ast$for\+Deletion)
+\end{DoxyCompactItemize}
+\subsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDrawOps_a5a33052c26c6047d4d8bf839a97b92ac}{set\+Zoom}} (int z)
+\begin{DoxyCompactList}\small\item\em Ändert den Zoomfaktor für des Fensters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawOps_a541a9b86fdabf35209d6fe1a7bccb8b8}{make\+Active}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$img)
+\begin{DoxyCompactList}\small\item\em Aktiviert eine Zeichnung, d.\+h. Anzeige im Graphikfenster. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawOps_a4c0713f93d8f4131ff00e462d501c055}{change\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Informiert das Zeichenfenster über eine geänderte Größe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawOps_aa0374dd23672c7313f0798172e5a3523}{update\+If\+Active}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$drw)
+\begin{DoxyCompactList}\small\item\em Informiert das Zeichenfenster über Veränderungen, falls {\ttfamily pm} gerade angezeigt wird. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawOps_a716f5c70f8b32a6e1a76437d5c3a346b}{obituary}} (const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$drw)
+\begin{DoxyCompactList}\small\item\em Informiert das Zeichenfenster über das Ableben einer Drawing-\/\+Instanz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDrawOps}{Draw\+Ops}} $\ast$ \mbox{\hyperlink{classDrawOps_a2f59844de416f8d3ca4a2a63ccefb0cd}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Liefert Zeiger auf die einzige Draw\+Ops-\/\+Instanz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDrawOps_a6aeac2fc0eb8bf1c86849aacddaa9ea2}{Draw\+Ops}} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Statische, private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDrawOps}{Draw\+Ops}} $\ast$ \mbox{\hyperlink{classDrawOps_adb69ea4ed5857e5f173064ad29018e6d}{the\+Instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+Klasse zur Bereitstellung von Zeichenoperationen und zur Kommunikation mit dem Zeichenfenster. 
+
+Verwendet Singleton-\/\+Pattern 
+
+Definiert in Zeile 18 der Datei drawops.\+h.
+
+
+
+\subsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classDrawOps_a6aeac2fc0eb8bf1c86849aacddaa9ea2}\label{classDrawOps_a6aeac2fc0eb8bf1c86849aacddaa9ea2}} 
+\index{Draw\+Ops@{Draw\+Ops}!Draw\+Ops@{Draw\+Ops}}
+\index{Draw\+Ops@{Draw\+Ops}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{Draw\+Ops()}{DrawOps()}}
+{\footnotesize\ttfamily Draw\+Ops\+::\+Draw\+Ops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definiert in Zeile 25 der Datei drawops.\+h.
+
+
+
+Wird benutzt von get\+Instance().
+
+
+
+\subsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classDrawOps_a4c0713f93d8f4131ff00e462d501c055}\label{classDrawOps_a4c0713f93d8f4131ff00e462d501c055}} 
+\index{Draw\+Ops@{Draw\+Ops}!change\+Size@{change\+Size}}
+\index{change\+Size@{change\+Size}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{change\+Size()}{changeSize()}}
+{\footnotesize\ttfamily void Draw\+Ops\+::change\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Informiert das Zeichenfenster über eine geänderte Größe. 
+
+
+
+Definiert in Zeile 30 der Datei drawops.\+cc.
+
+
+
+Benutzt sig\+Size().
+
+
+
+Wird benutzt von Drawing\+::load\+Image() und Drawing\+::operator=().
+
+\mbox{\Hypertarget{classDrawOps_a2f59844de416f8d3ca4a2a63ccefb0cd}\label{classDrawOps_a2f59844de416f8d3ca4a2a63ccefb0cd}} 
+\index{Draw\+Ops@{Draw\+Ops}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawOps}{Draw\+Ops}} $\ast$ Draw\+Ops\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Liefert Zeiger auf die einzige Draw\+Ops-\/\+Instanz. 
+
+
+
+Definiert in Zeile 14 der Datei drawops.\+cc.
+
+
+
+Benutzt Draw\+Ops() und the\+Instance.
+
+
+
+Wird benutzt von Drawing\+::load\+Image(), main(), Drawing\+::operator=(), Drawing\+::set\+Zoom(), Drawing\+::show(), Drawing\+::update() und Drawing\+::$\sim$\+Drawing().
+
+\mbox{\Hypertarget{classDrawOps_a541a9b86fdabf35209d6fe1a7bccb8b8}\label{classDrawOps_a541a9b86fdabf35209d6fe1a7bccb8b8}} 
+\index{Draw\+Ops@{Draw\+Ops}!make\+Active@{make\+Active}}
+\index{make\+Active@{make\+Active}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{make\+Active()}{makeActive()}}
+{\footnotesize\ttfamily void Draw\+Ops\+::make\+Active (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+Aktiviert eine Zeichnung, d.\+h. Anzeige im Graphikfenster. 
+
+
+
+Definiert in Zeile 21 der Datei drawops.\+cc.
+
+
+
+Benutzt sig\+Activate().
+
+
+
+Wird benutzt von Drawing\+::show().
+
+\mbox{\Hypertarget{classDrawOps_a716f5c70f8b32a6e1a76437d5c3a346b}\label{classDrawOps_a716f5c70f8b32a6e1a76437d5c3a346b}} 
+\index{Draw\+Ops@{Draw\+Ops}!obituary@{obituary}}
+\index{obituary@{obituary}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{obituary()}{obituary()}}
+{\footnotesize\ttfamily void Draw\+Ops\+::obituary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{drw }\end{DoxyParamCaption})}
+
+
+
+Informiert das Zeichenfenster über das Ableben einer Drawing-\/\+Instanz. 
+
+Blockiert, bis das Fenster das Signal bestätigt hat. 
+
+Definiert in Zeile 45 der Datei drawops.\+cc.
+
+
+
+Benutzt sig\+Dead().
+
+
+
+Wird benutzt von Drawing\+::$\sim$\+Drawing().
+
+\mbox{\Hypertarget{classDrawOps_a5a33052c26c6047d4d8bf839a97b92ac}\label{classDrawOps_a5a33052c26c6047d4d8bf839a97b92ac}} 
+\index{Draw\+Ops@{Draw\+Ops}!set\+Zoom@{set\+Zoom}}
+\index{set\+Zoom@{set\+Zoom}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{set\+Zoom()}{setZoom()}}
+{\footnotesize\ttfamily void Draw\+Ops\+::set\+Zoom (\begin{DoxyParamCaption}\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ändert den Zoomfaktor für des Fensters. 
+
+
+
+Definiert in Zeile 32 der Datei drawops.\+h.
+
+
+
+Benutzt sig\+Zoom().
+
+
+
+Wird benutzt von Drawing\+::set\+Zoom().
+
+\mbox{\Hypertarget{classDrawOps_a54f8abd3bf4ec1a3dbd22cdf6c1bd6b7}\label{classDrawOps_a54f8abd3bf4ec1a3dbd22cdf6c1bd6b7}} 
+\index{Draw\+Ops@{Draw\+Ops}!sig\+Activate@{sig\+Activate}}
+\index{sig\+Activate@{sig\+Activate}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{sig\+Activate}{sigActivate}}
+{\footnotesize\ttfamily void Draw\+Ops\+::sig\+Activate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{drw,  }\item[{Q\+Wait\+Condition $\ast$}]{made\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Wird benutzt von main() und make\+Active().
+
+\mbox{\Hypertarget{classDrawOps_ad121a0a6a2c1f022216b44159c022c0a}\label{classDrawOps_ad121a0a6a2c1f022216b44159c022c0a}} 
+\index{Draw\+Ops@{Draw\+Ops}!sig\+Dead@{sig\+Dead}}
+\index{sig\+Dead@{sig\+Dead}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{sig\+Dead}{sigDead}}
+{\footnotesize\ttfamily void Draw\+Ops\+::sig\+Dead (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{drw,  }\item[{Q\+Wait\+Condition $\ast$}]{for\+Deletion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Wird benutzt von main() und obituary().
+
+\mbox{\Hypertarget{classDrawOps_a2e49eface451924dbcf4b5687285ab88}\label{classDrawOps_a2e49eface451924dbcf4b5687285ab88}} 
+\index{Draw\+Ops@{Draw\+Ops}!sig\+Size@{sig\+Size}}
+\index{sig\+Size@{sig\+Size}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{sig\+Size}{sigSize}}
+{\footnotesize\ttfamily void Draw\+Ops\+::sig\+Size (\begin{DoxyParamCaption}\item[{Q\+Wait\+Condition $\ast$}]{changed\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Wird benutzt von change\+Size() und main().
+
+\mbox{\Hypertarget{classDrawOps_a274f32dcc53300fc594ab5683a0e2071}\label{classDrawOps_a274f32dcc53300fc594ab5683a0e2071}} 
+\index{Draw\+Ops@{Draw\+Ops}!sig\+Update@{sig\+Update}}
+\index{sig\+Update@{sig\+Update}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{sig\+Update}{sigUpdate}}
+{\footnotesize\ttfamily void Draw\+Ops\+::sig\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Wird benutzt von main() und update\+If\+Active().
+
+\mbox{\Hypertarget{classDrawOps_a42489500245289165f927bcd9891c9bf}\label{classDrawOps_a42489500245289165f927bcd9891c9bf}} 
+\index{Draw\+Ops@{Draw\+Ops}!sig\+Zoom@{sig\+Zoom}}
+\index{sig\+Zoom@{sig\+Zoom}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{sig\+Zoom}{sigZoom}}
+{\footnotesize\ttfamily void Draw\+Ops\+::sig\+Zoom (\begin{DoxyParamCaption}\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Wird benutzt von main() und set\+Zoom().
+
+\mbox{\Hypertarget{classDrawOps_aa0374dd23672c7313f0798172e5a3523}\label{classDrawOps_aa0374dd23672c7313f0798172e5a3523}} 
+\index{Draw\+Ops@{Draw\+Ops}!update\+If\+Active@{update\+If\+Active}}
+\index{update\+If\+Active@{update\+If\+Active}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{update\+If\+Active()}{updateIfActive()}}
+{\footnotesize\ttfamily void Draw\+Ops\+::update\+If\+Active (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} $\ast$}]{drw }\end{DoxyParamCaption})}
+
+
+
+Informiert das Zeichenfenster über Veränderungen, falls {\ttfamily pm} gerade angezeigt wird. 
+
+
+
+Definiert in Zeile 39 der Datei drawops.\+cc.
+
+
+
+Benutzt Draw\+Window\+::get\+Instance() und sig\+Update().
+
+
+
+Wird benutzt von Drawing\+::update().
+
+
+
+\subsubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classDrawOps_adb69ea4ed5857e5f173064ad29018e6d}\label{classDrawOps_adb69ea4ed5857e5f173064ad29018e6d}} 
+\index{Draw\+Ops@{Draw\+Ops}!the\+Instance@{the\+Instance}}
+\index{the\+Instance@{the\+Instance}!Draw\+Ops@{Draw\+Ops}}
+\paragraph{\texorpdfstring{the\+Instance}{theInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawOps}{Draw\+Ops}} $\ast$ Draw\+Ops\+::the\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definiert in Zeile 23 der Datei drawops.\+h.
+
+
+
+Wird benutzt von get\+Instance().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{drawops_8h}{drawops.\+h}}\item 
+\mbox{\hyperlink{drawops_8cc}{drawops.\+cc}}\end{DoxyCompactItemize}

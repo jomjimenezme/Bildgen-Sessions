@@ -1,0 +1,4 @@
+scene_snowman.o scene_snowman.dep : scene_snowman.cc scene.h object.h ray.h hitinfo.h \
+ camera.h light.h visibleinfo.h raytracer.h image.h objects.h plane.h \
+ sphere.h box.h parallelogram.h planar.h parallelepiped.h tetraeder.h \
+ triangle.h

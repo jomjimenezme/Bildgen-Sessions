@@ -1,0 +1,3 @@
+1.0    1.0  # umin, umax, nichts wird geclippt
+1.0    1.0  # vmin, vmax, nichts wird geclippt
+0.0 9999.0  # near, far,  nichts wird geclippt

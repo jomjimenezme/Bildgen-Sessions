@@ -1,0 +1,2 @@
+scene.o scene.dep : scene.cc scene.h object.h ray.h hitinfo.h camera.h light.h \
+ visibleinfo.h

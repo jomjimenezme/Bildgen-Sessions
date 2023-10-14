@@ -1,0 +1,150 @@
+\hypertarget{vec3d_8h}{}\subsection{vec3d.\+h-\/\+Dateireferenz}
+\label{vec3d_8h}\index{vec3d.\+h@{vec3d.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für vec3d.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{vec3d_8h__incl}
+\end{center}
+\end{figure}
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{vec3d_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Klassen}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classVec3D}{Vec3D}}
+\begin{DoxyCompactList}\small\item\em Koordinaten eines 3\+D-\/\+Vektors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVec3D}{Vec3D}} \mbox{\hyperlink{vec3d_8h_a1fe7ecdd5fd9bee85153e119fe433025}{operator$\ast$}} (double a, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v)
+\begin{DoxyCompactList}\small\item\em Skalar mal Vektor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVec3D}{Vec3D}} \mbox{\hyperlink{vec3d_8h_a4796877fe485000f61b4cd696534148b}{operator$\ast$}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v1, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v2)
+\begin{DoxyCompactList}\small\item\em Elementweise Multiplikation Vektor mal Vektor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVec3D}{Vec3D}} \mbox{\hyperlink{vec3d_8h_a0714ab30261b18ea6721bd83816cd486}{operator/}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v, double a)
+\begin{DoxyCompactList}\small\item\em Elementweise Division Vektor durch Skalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVec3D}{Vec3D}} \mbox{\hyperlink{vec3d_8h_aeada619086bdd98db144b222dba90ef1}{operator+}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v1, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v2)
+\begin{DoxyCompactList}\small\item\em Vektor plus Vektor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVec3D}{Vec3D}} \mbox{\hyperlink{vec3d_8h_ad36d432fe0ba2f6a0bcdc96d0495a85e}{operator-\/}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v1, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v2)
+\begin{DoxyCompactList}\small\item\em Vektor minus Vektor. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{vec3d_8h_ac5a5bcceb91ee470ba1f5db2e9d688e7}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v)
+\begin{DoxyCompactList}\small\item\em Ausgabe eines Vektors in der Form (x y z) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vec3d_8h_a5c2f013ccdcb340370fd0f577360b878}{norm}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v)
+\begin{DoxyCompactList}\small\item\em Vektornorm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vec3d_8h_a859a9aabc91d3dae5bba06b0125664f8}{skalarprod}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v1, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v2)
+\begin{DoxyCompactList}\small\item\em Skalarprodukt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVec3D}{Vec3D}} \mbox{\hyperlink{vec3d_8h_a33372f3fce80f8814ad14cdf52121f44}{kreuzprod}} (const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v1, const \mbox{\hyperlink{classVec3D}{Vec3D}} \&v2)
+\begin{DoxyCompactList}\small\item\em Kreuzprodukt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+\begin{DoxyAuthor}{Autor}
+Holger Arndt, Sebastian Birk, Martin Galgon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Datum}
+10.\+11.\+2016 
+\end{DoxyDate}
+
+
+\subsubsection{Dokumentation der Funktionen}
+\mbox{\Hypertarget{vec3d_8h_a33372f3fce80f8814ad14cdf52121f44}\label{vec3d_8h_a33372f3fce80f8814ad14cdf52121f44}} 
+\index{vec3d.\+h@{vec3d.\+h}!kreuzprod@{kreuzprod}}
+\index{kreuzprod@{kreuzprod}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{kreuzprod()}{kreuzprod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec3D}{Vec3D}} kreuzprod (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+Kreuzprodukt. 
+
+\mbox{\Hypertarget{vec3d_8h_a5c2f013ccdcb340370fd0f577360b878}\label{vec3d_8h_a5c2f013ccdcb340370fd0f577360b878}} 
+\index{vec3d.\+h@{vec3d.\+h}!norm@{norm}}
+\index{norm@{norm}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily double norm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Vektornorm. 
+
+\mbox{\Hypertarget{vec3d_8h_a1fe7ecdd5fd9bee85153e119fe433025}\label{vec3d_8h_a1fe7ecdd5fd9bee85153e119fe433025}} 
+\index{vec3d.\+h@{vec3d.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec3D}{Vec3D}} operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Skalar mal Vektor. 
+
+\mbox{\Hypertarget{vec3d_8h_a4796877fe485000f61b4cd696534148b}\label{vec3d_8h_a4796877fe485000f61b4cd696534148b}} 
+\index{vec3d.\+h@{vec3d.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec3D}{Vec3D}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+Elementweise Multiplikation Vektor mal Vektor. 
+
+\mbox{\Hypertarget{vec3d_8h_aeada619086bdd98db144b222dba90ef1}\label{vec3d_8h_aeada619086bdd98db144b222dba90ef1}} 
+\index{vec3d.\+h@{vec3d.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec3D}{Vec3D}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+Vektor plus Vektor. 
+
+\mbox{\Hypertarget{vec3d_8h_ad36d432fe0ba2f6a0bcdc96d0495a85e}\label{vec3d_8h_ad36d432fe0ba2f6a0bcdc96d0495a85e}} 
+\index{vec3d.\+h@{vec3d.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec3D}{Vec3D}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+Vektor minus Vektor. 
+
+\mbox{\Hypertarget{vec3d_8h_a0714ab30261b18ea6721bd83816cd486}\label{vec3d_8h_a0714ab30261b18ea6721bd83816cd486}} 
+\index{vec3d.\+h@{vec3d.\+h}!operator/@{operator/}}
+\index{operator/@{operator/}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVec3D}{Vec3D}} operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v,  }\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+Elementweise Division Vektor durch Skalar. 
+
+\mbox{\Hypertarget{vec3d_8h_ac5a5bcceb91ee470ba1f5db2e9d688e7}\label{vec3d_8h_ac5a5bcceb91ee470ba1f5db2e9d688e7}} 
+\index{vec3d.\+h@{vec3d.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Ausgabe eines Vektors in der Form (x y z) 
+
+\mbox{\Hypertarget{vec3d_8h_a859a9aabc91d3dae5bba06b0125664f8}\label{vec3d_8h_a859a9aabc91d3dae5bba06b0125664f8}} 
+\index{vec3d.\+h@{vec3d.\+h}!skalarprod@{skalarprod}}
+\index{skalarprod@{skalarprod}!vec3d.\+h@{vec3d.\+h}}
+\paragraph{\texorpdfstring{skalarprod()}{skalarprod()}}
+{\footnotesize\ttfamily double skalarprod (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v1,  }\item[{const \mbox{\hyperlink{classVec3D}{Vec3D}} \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+Skalarprodukt. 
+

@@ -1,0 +1,2 @@
+tetraeder.o tetraeder.dep : tetraeder.cc tetraeder.h ray.h object.h hitinfo.h triangle.h \
+ planar.h

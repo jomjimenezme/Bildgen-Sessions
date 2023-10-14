@@ -1,0 +1,124 @@
+3_notes.txt
+
+
+Und Trittbrett :D
+
+Begginen Wir mit einem Box. 
+
+
+#local Trittbrett = object {
+  box { <5,0,-12>, <45,.5,12> texture { ?? } }
+ }
+ 
+ +
+ 
+ union { // Roller
+ ...
+ object {
+    Trittbrett
+    translate 21*x
+    translate 3*y
+  }
+ ...
+ }
+ .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+ Versucht, die Funktion "difference" zu verwenden, um ein "besseres" 
+ Trittbrett zu erstellen. 
+ HINWEIS:
+ - Erzeug 2 Boxen: (-10, 0, -20)  (0,1,20)  
+ - Dreh die Boxen
+ 
+ #local Trittbrett = difference {
+ ...
+ }
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#local Trittbrett = difference {
+  box { <5,0,-12>, <45,.5,12> texture { TexturTrittbrett } }
+  box { <-10,0,-20>, <0,1,20> rotate 45*y }
+  box { <-10,0,-20>, <0,1,20> rotate -45*y }
+}

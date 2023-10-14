@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016: matrix4x4.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.14 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Suchen');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('matrix4x4_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">matrix4x4.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="matrix4x4_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef CPPQT_MATRIX4X4_H_</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define CPPQT_MATRIX4X4_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vec4d_8h.html">vec4d.h</a>&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classMatrix4x4.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix4x4.html">Matrix4x4</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classMatrix4x4.html#a85ef321b7e2d0b621368e4d775065833">   17</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classMatrix4x4.html#a85ef321b7e2d0b621368e4d775065833">el</a>[4][4];</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classMatrix4x4.html#a714a467ba7f85f88ebe3897b5e3580be">Matrix4x4</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classMatrix4x4.html#a714a467ba7f85f88ebe3897b5e3580be">Matrix4x4</a>(<span class="keywordtype">double</span> m[4][4]);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;std::ostream&amp; <a class="code" href="matrix4x4_8h.html#a88f03eeccdcb2470892a7a9d6b337d44">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classMatrix4x4.html">Matrix4x4</a>&amp; t);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="classMatrix4x4.html">Matrix4x4</a> <a class="code" href="matrix4x4_8h.html#ad9bd542d45842535ee38455af717c029">operator*</a>(<span class="keyword">const</span> <a class="code" href="classMatrix4x4.html">Matrix4x4</a>&amp; t1, <span class="keyword">const</span> <a class="code" href="classMatrix4x4.html">Matrix4x4</a>&amp; t2);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="classVec4D.html">Vec4D</a> <a class="code" href="matrix4x4_8h.html#ad9bd542d45842535ee38455af717c029">operator*</a>(<span class="keyword">const</span> <a class="code" href="classMatrix4x4.html">Matrix4x4</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classVec4D.html">Vec4D</a>&amp; v);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // CPPQT_MATRIX4X4_H_</span></div><div class="ttc" id="matrix4x4_8h_html_a88f03eeccdcb2470892a7a9d6b337d44"><div class="ttname"><a href="matrix4x4_8h.html#a88f03eeccdcb2470892a7a9d6b337d44">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Matrix4x4 &amp;t)</div><div class="ttdoc">Zeilenweise Ausgabe einer Matrix. </div></div>
+<div class="ttc" id="classMatrix4x4_html"><div class="ttname"><a href="classMatrix4x4.html">Matrix4x4</a></div><div class="ttdoc">4x4-Matrix, dient auch als Transformationsmatrix für 3D-Vektoren mit homogenen Koordinaten ...</div><div class="ttdef"><b>Definition:</b> <a href="matrix4x4_8h_source.html#l00013">matrix4x4.h:13</a></div></div>
+<div class="ttc" id="vec4d_8h_html"><div class="ttname"><a href="vec4d_8h.html">vec4d.h</a></div></div>
+<div class="ttc" id="matrix4x4_8h_html_ad9bd542d45842535ee38455af717c029"><div class="ttname"><a href="matrix4x4_8h.html#ad9bd542d45842535ee38455af717c029">operator*</a></div><div class="ttdeci">Matrix4x4 operator*(const Matrix4x4 &amp;t1, const Matrix4x4 &amp;t2)</div><div class="ttdoc">Matrix-Matrix-Multiplikation. </div></div>
+<div class="ttc" id="classVec4D_html"><div class="ttname"><a href="classVec4D.html">Vec4D</a></div><div class="ttdoc">Homogene Koordinaten eines 3D-Vektors oder ein 4D-Vektor. </div><div class="ttdef"><b>Definition:</b> <a href="vec4d_8h_source.html#l00013">vec4d.h:13</a></div></div>
+<div class="ttc" id="classMatrix4x4_html_a714a467ba7f85f88ebe3897b5e3580be"><div class="ttname"><a href="classMatrix4x4.html#a714a467ba7f85f88ebe3897b5e3580be">Matrix4x4::Matrix4x4</a></div><div class="ttdeci">Matrix4x4()</div><div class="ttdoc">Nullmatrix Konstruktor. </div></div>
+<div class="ttc" id="classMatrix4x4_html_a85ef321b7e2d0b621368e4d775065833"><div class="ttname"><a href="classMatrix4x4.html#a85ef321b7e2d0b621368e4d775065833">Matrix4x4::el</a></div><div class="ttdeci">double el[4][4]</div><div class="ttdoc">Matrixelemente. </div><div class="ttdef"><b>Definition:</b> <a href="matrix4x4_8h_source.html#l00017">matrix4x4.h:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="matrix4x4_8h.html">matrix4x4.h</a></li>
+    <li class="footer">Erzeugt am Die Okt 26 2021 17:10:37 für cppqt – Framework zur Vorlesung „Bildgenerierung“ im WS 2015/2016 von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

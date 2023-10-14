@@ -1,0 +1,56 @@
+## Makefile für Raytracer
+## Autor: Holger Arndt
+## Datum: 18.01.2016
+
+CPP = cpp
+MAKEDEP = $(CPP) -MM -std=c++11 -fPIC
+CXX = g++
+
+QT_INCLUDE_PATH = /scratch/galgon/libraries/qt-5.7.0/install/include
+QT_LIBRARY_PATH = /scratch/galgon/libraries/qt-5.7.0/install/lib
+
+CXXFLAGS = -std=c++11 -O3 -Wall \
+	-Wno-unused-local-typedefs -Wno-deprecated-declarations \
+	-fPIC -DQT_NO_VERSION_TAGGING
+CPPQTINC = -I/home/wmaisrv1/galgon/Lehre/BVWS1617/cppqt
+CPPQTLIB = -L/home/wmaisrv1/galgon/Lehre/BVWS1617/cppqt -ldrawqt
+QTINC = -I$(QT_INCLUDE_PATH)/QtCore -I$(QT_INCLUDE_PATH)/QtGui \
+        -I$(QT_INCLUDE_PATH)/QtWidgets -I$(QT_INCLUDE_PATH)
+QTLIB = -L$(QT_LIBRARY_PATH) -lQt5Core -lQt5Gui -lQt5Widgets
+EIGENINC = -I/home/wmaisrv1/galgon/libraries/eigen-3.3.0
+
+SCENESEXE = scene_snowman scene_exercise scene_exercise2 scene_tests \
+	scene_vorlesung scene_exercise3
+SCENESSRC = $(patsubst %,%.cc,$(SCENESEXE))
+SCENESOBJ = $(patsubst %.cc,%.o,$(SCENESSRC))
+SCENESDEP = $(patsubst %.cc,%.dep,$(SCENESSRC))
+RTSRC = box.cc camera.cc image.cc light.cc parallelepiped.cc parallelogram.cc \
+	planar.cc plane.cc raytracer.cc scene.cc sphere.cc tetraeder.cc \
+	triangle.cc
+RTOBJ =  $(patsubst %.cc,%.o,$(RTSRC))
+RTDEP = $(patsubst %.cc,%.dep,$(RTSRC))
+
+
+default: $(SCENESEXE)
+
+.SUFFIXES:
+.SECONDARY:
+
+%: %.o $(RTOBJ)
+	$(CXX) $^ -o $@ $(CPPQTLIB) $(QTLIB) -Wl,-rpath=$(QT_LIBRARY_PATH)
+
+%.o: %.cc
+	$(CXX) $(CXXFLAGS) -c -I. $(CPPQTINC) $(QTINC) $(EIGENINC) $< -o $@
+
+%.dep: %.cc
+	$(MAKEDEP) $< | sed 's/\($*\)\.o[ :]*/\1.o $@ : /g' > $@
+
+clean:
+	rm -rf $(SCENESEXE) $(SCENESOBJ) $(SCENESDEP) $(RTOBJ) $(RTDEP)
+
+tgz: raytracer.tgz
+
+raytracer.tgz:
+	tar cfvz $@ README Makefile *.h *.cc
+
+-include $(SCENESDEP) $(RTDEP)

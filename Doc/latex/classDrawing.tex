@@ -1,0 +1,711 @@
+\hypertarget{classDrawing}{}\subsection{Drawing Klassenreferenz}
+\label{classDrawing}\index{Drawing@{Drawing}}
+
+
+Ein Bild.  
+
+
+
+
+{\ttfamily \#include $<$drawing.\+h$>$}
+
+
+
+Zusammengehörigkeiten von Drawing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classDrawing__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDrawing_a9fb3a5b171cda26bb4dfccce875642c3}{Drawing}} ()
+\begin{DoxyCompactList}\small\item\em Default-\/\+Konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawing_a17c39c9f29437c7f30fb22a1b007833d}{Drawing}} (const \mbox{\hyperlink{classDrawing}{Drawing}} \&d2)
+\begin{DoxyCompactList}\small\item\em Kopier-\/\+Konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawing_a15cdefe87db87a22c59e61e64c849cfd}{Drawing}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Konstruktor für vorgegebene Breite {\ttfamily w} und Höhe {\ttfamily h}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawing_a3bbc5afdee11ef4fb66bfa1a8b4d0e22}{Drawing}} (int w, int h, const \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} \&colour)
+\begin{DoxyCompactList}\small\item\em Konstruktor für vorgegebene Breite {\ttfamily w}, Höhe {\ttfamily h} und Hintergrundfarbe {\ttfamily colour}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawing_a704a4be87976fca2f8b175a4aa257e9d}{$\sim$\+Drawing}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. Informiert \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} über das Ableben dieser Instanz. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDrawing_ad1272e2a9ec8cd0f69f5c42f9c95c6ce}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gibt die Breite des Bildes aus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDrawing_a7bd4dcf4718cf46a73d11e63dc7bc876}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Gibt die Hoehe des Bildes aus. \end{DoxyCompactList}\item 
+const Q\+Image $\ast$ \mbox{\hyperlink{classDrawing_a8cdafb9ad4dfd4b54dc40ae753980177}{get\+Image}} () const
+\begin{DoxyCompactList}\small\item\em Liefert Zeiger auf das enthaltene Image. \end{DoxyCompactList}\item 
+Q\+Mutex $\ast$ \mbox{\hyperlink{classDrawing_ae3d1a4bb0a61a5bd64170abc154dd25c}{get\+Mutex}} () const
+\begin{DoxyCompactList}\small\item\em Liefert Zeiger auf Mutex zum Sperren des Bildzugriffs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a0f16d649365d717f01b141761d487cf4}{set\+Zoom}} (int z)
+\begin{DoxyCompactList}\small\item\em Ändert den Zoomfaktor für des Fensters, falls es angezeigt wird. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_afbc865383cc38520bd094c6ad7ac2df7}{show}} () const
+\begin{DoxyCompactList}\small\item\em Zeigt dieses Bild im Graphikfenster an, ersetzt bisherigen Fensterinhalt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a7c4c84c4956ff577d5032f0c4b2991bd}{update}} () const
+\begin{DoxyCompactList}\small\item\em Informiert das Zeichenfenster über Veränderungen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawing}{Drawing}} \& \mbox{\hyperlink{classDrawing_aef1c7b74a454594f18aebcc0a8c17b8c}{operator=}} (const \mbox{\hyperlink{classDrawing}{Drawing}} \&d2)
+\begin{DoxyCompactList}\small\item\em Zuweisungsoperator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawing}{Drawing}} \& \mbox{\hyperlink{classDrawing_a530fbd926b17ea337b4a1c703d95e449}{operator=}} (\mbox{\hyperlink{classDrawColour}{Draw\+Colour}} colour)
+\begin{DoxyCompactList}\small\item\em Setzt das ganze Bild auf die Farbe {\ttfamily colour}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_add2536b3ea8de4f033cb53f0d66192b1}{load\+Image}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Lädt die Bilddatei {\ttfamily filename}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a55355208f1dc677fd30806b170a14bcf}{save\+P\+GM}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Speichert das Bild im pgm-\/\+Format in der Datei {\ttfamily filename}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a8e6f3bd4617ef1f84635c6983a4840c1}{save\+P\+PM}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Speichert das Bild im ppm-\/\+Format in der Datei {\ttfamily filename}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_aae4e25704b69cef5d37a7c5db860336d}{save\+P\+NG}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Speichert das Bild im png-\/\+Format in der Datei {\ttfamily filename}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawColour}{Draw\+Colour}} \mbox{\hyperlink{classDrawing_a7bd8894ca2d1a9e5cd4945ede17ca167}{get\+Point\+Colour}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Liefert die Farbe des Pixels an Position ({\ttfamily x}, {\ttfamily y}) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDrawColour}{Draw\+Colour}} \mbox{\hyperlink{classDrawing_ad25dde1cf53c3858121f940ece8f9d96}{get\+Point\+Colour}} (\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} p) const
+\begin{DoxyCompactList}\small\item\em Liefert die Farbe des Pixels an Position {\ttfamily p}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a34754d4f4d6e129dae03f058d76dd43f}{set\+Sleep\+Time}} (int milli)
+\begin{DoxyCompactList}\small\item\em Setzt die Wartezeit für verzögertes Malen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a482d8231afa23d444084a30c94cd5252}{draw\+Point}} (int x, int y, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} colour=0, bool drawslow=false, bool draw\+X\+OR=false)
+\begin{DoxyCompactList}\small\item\em Zeichnet einen Punkt der Farbe {\ttfamily colour} an Position ({\ttfamily x}, {\ttfamily y}) ins Bild. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_ace204fccbe188a6b9e8d524cc243f005}{draw\+Point}} (\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} p, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} colour=0, bool drawslow=false, bool draw\+X\+OR=false)
+\begin{DoxyCompactList}\small\item\em Zeichnet einen Punkt der Farbe {\ttfamily colour} an Position {\ttfamily p} ins Bild. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a80093353d917a5f15ba631eeb546d97c}{draw\+Line}} (int x1, int y1, int x2, int y2, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} colour=0, bool drawslow=false)
+\begin{DoxyCompactList}\small\item\em Zeichnet eine Linie der Farbe {\ttfamily colour} von ({\ttfamily x1}, {\ttfamily y1}) nach ({\ttfamily x2} {\ttfamily y2}) ins Bild. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_aee26a121d00e5ba0317c4280cb07e3bf}{draw\+Line}} (\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} p1, \mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} p2, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} colour=0, bool drawslow=false)
+\begin{DoxyCompactList}\small\item\em Zeichnet eine Linie der Farbe {\ttfamily colour} von {\ttfamily p1} nach {\ttfamily p2} ins Bild. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_a28721ef60cde505e521e391f698f21fe}{draw\+Circle}} (\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} c, int r, bool filled=false, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} fg=0, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} bg=255, bool drawslow=false)
+\begin{DoxyCompactList}\small\item\em Zeichnet einen Kreis mit Mittelpunkt {\ttfamily c} und Radius {\ttfamily r} ins Bild. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_ad449deed6b1939b2232158ce25d327ee}{draw\+Polygon}} (const std\+::vector$<$ \mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} $>$ \&e, bool filled=false, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} fg=0, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} bg=255, bool drawslow=false)
+\begin{DoxyCompactList}\small\item\em Zeichnet ein Polygon mit Ecken {\ttfamily e} ins Bild. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawing_afa0ebabdcc81eb06d4b67e6bb83cdc4d}{draw\+Text}} (\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} pos, const std\+::string \&text, \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} colour=0)
+\begin{DoxyCompactList}\small\item\em Zeichnet den Text {\ttfamily text} mit der Frabe {\ttfamily colour} an die Position {\ttfamily pos} ins Bild. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classDrawing_a3ef33783605b7ecd7159bcdb2fdd9a02}{makeanim}} (const std\+::vector$<$ \mbox{\hyperlink{classDrawing}{Drawing}} $>$ \&pics, const std\+::string \&filename, const std\+::string \&type, int delay=4)
+\begin{DoxyCompactList}\small\item\em Erzeugt eine Animation namens {\ttfamily filename.\+type} aus den Einzelbildern in pics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Image \mbox{\hyperlink{classDrawing_a8c2defb1fd8bab5ebc0b38da136f8e2b}{img}}
+\item 
+int \mbox{\hyperlink{classDrawing_a7a904cbe419acdcd9187f1334b0b632c}{sleep\+Milli}}
+\item 
+Q\+Mutex \mbox{\hyperlink{classDrawing_a1a0a2569cbbab72dffcd088df14428de}{img\+Mutex}}
+\end{DoxyCompactItemize}
+\subsubsection*{Statische, private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classDrawing_a208988699d8af4c3f53ebad688bc42bf}{default\+Sleep\+Milli}} = 10
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Ausführliche Beschreibung}
+Ein Bild. 
+
+Definiert in Zeile 21 der Datei drawing.\+h.
+
+
+
+\subsubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classDrawing_a9fb3a5b171cda26bb4dfccce875642c3}\label{classDrawing_a9fb3a5b171cda26bb4dfccce875642c3}} 
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{Drawing()}{Drawing()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Drawing\+::\+Drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default-\/\+Konstruktor. 
+
+Erzeugt ein leeres weißes Bild der Standardgröße 200×100 
+
+Definiert in Zeile 31 der Datei drawing.\+h.
+
+
+
+Benutzt img.
+
+\mbox{\Hypertarget{classDrawing_a17c39c9f29437c7f30fb22a1b007833d}\label{classDrawing_a17c39c9f29437c7f30fb22a1b007833d}} 
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{Drawing()}{Drawing()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Drawing\+::\+Drawing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} \&}]{d2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Kopier-\/\+Konstruktor. 
+
+
+
+Definiert in Zeile 35 der Datei drawing.\+h.
+
+\mbox{\Hypertarget{classDrawing_a15cdefe87db87a22c59e61e64c849cfd}\label{classDrawing_a15cdefe87db87a22c59e61e64c849cfd}} 
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{Drawing()}{Drawing()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Drawing\+::\+Drawing (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor für vorgegebene Breite {\ttfamily w} und Höhe {\ttfamily h}. 
+
+Der Hintergrund wird automatisch auf weiß gesetzt. 
+
+Definiert in Zeile 39 der Datei drawing.\+h.
+
+
+
+Benutzt img.
+
+\mbox{\Hypertarget{classDrawing_a3bbc5afdee11ef4fb66bfa1a8b4d0e22}\label{classDrawing_a3bbc5afdee11ef4fb66bfa1a8b4d0e22}} 
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\index{Drawing@{Drawing}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{Drawing()}{Drawing()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Drawing\+::\+Drawing (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{const \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} \&}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor für vorgegebene Breite {\ttfamily w}, Höhe {\ttfamily h} und Hintergrundfarbe {\ttfamily colour}. 
+
+
+
+Definiert in Zeile 45 der Datei drawing.\+h.
+
+
+
+Benutzt img.
+
+\mbox{\Hypertarget{classDrawing_a704a4be87976fca2f8b175a4aa257e9d}\label{classDrawing_a704a4be87976fca2f8b175a4aa257e9d}} 
+\index{Drawing@{Drawing}!````~Drawing@{$\sim$\+Drawing}}
+\index{````~Drawing@{$\sim$\+Drawing}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{$\sim$\+Drawing()}{~Drawing()}}
+{\footnotesize\ttfamily Drawing\+::$\sim$\+Drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor. Informiert \mbox{\hyperlink{classDrawWindow}{Draw\+Window}} über das Ableben dieser Instanz. 
+
+
+
+Definiert in Zeile 21 der Datei drawing.\+cc.
+
+
+
+Benutzt Draw\+Ops\+::get\+Instance() und Draw\+Ops\+::obituary().
+
+
+
+\subsubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classDrawing_a28721ef60cde505e521e391f698f21fe}\label{classDrawing_a28721ef60cde505e521e391f698f21fe}} 
+\index{Drawing@{Drawing}!draw\+Circle@{draw\+Circle}}
+\index{draw\+Circle@{draw\+Circle}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Circle()}{drawCircle()}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}}}]{c,  }\item[{int}]{r,  }\item[{bool}]{filled = {\ttfamily false},  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{fg = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{bg = {\ttfamily 255},  }\item[{bool}]{drawslow = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Zeichnet einen Kreis mit Mittelpunkt {\ttfamily c} und Radius {\ttfamily r} ins Bild. 
+
+Der Rand hat die Farbe {\ttfamily fg}; falls {\ttfamily filled} auf {\ttfamily true} gesetzt ist, wird mit Farbe {\ttfamily bg} gefüllt. 
+
+Definiert in Zeile 115 der Datei drawing.\+cc.
+
+
+
+Benutzt I\+O\+Thread\+::msleep(), Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{classDrawing_a80093353d917a5f15ba631eeb546d97c}\label{classDrawing_a80093353d917a5f15ba631eeb546d97c}} 
+\index{Drawing@{Drawing}!draw\+Line@{draw\+Line}}
+\index{draw\+Line@{draw\+Line}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Line()}{drawLine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Line (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{colour = {\ttfamily 0},  }\item[{bool}]{drawslow = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Zeichnet eine Linie der Farbe {\ttfamily colour} von ({\ttfamily x1}, {\ttfamily y1}) nach ({\ttfamily x2} {\ttfamily y2}) ins Bild. 
+
+
+
+Definiert in Zeile 100 der Datei drawing.\+cc.
+
+
+
+Benutzt I\+O\+Thread\+::msleep().
+
+
+
+Wird benutzt von draw\+Line() und maindraw().
+
+\mbox{\Hypertarget{classDrawing_aee26a121d00e5ba0317c4280cb07e3bf}\label{classDrawing_aee26a121d00e5ba0317c4280cb07e3bf}} 
+\index{Drawing@{Drawing}!draw\+Line@{draw\+Line}}
+\index{draw\+Line@{draw\+Line}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Line()}{drawLine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}}}]{p1,  }\item[{\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}}}]{p2,  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{colour = {\ttfamily 0},  }\item[{bool}]{drawslow = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zeichnet eine Linie der Farbe {\ttfamily colour} von {\ttfamily p1} nach {\ttfamily p2} ins Bild. 
+
+
+
+Definiert in Zeile 125 der Datei drawing.\+h.
+
+
+
+Benutzt draw\+Line(), Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{classDrawing_a482d8231afa23d444084a30c94cd5252}\label{classDrawing_a482d8231afa23d444084a30c94cd5252}} 
+\index{Drawing@{Drawing}!draw\+Point@{draw\+Point}}
+\index{draw\+Point@{draw\+Point}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Point()}{drawPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Point (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{colour = {\ttfamily 0},  }\item[{bool}]{drawslow = {\ttfamily false},  }\item[{bool}]{draw\+X\+OR = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Zeichnet einen Punkt der Farbe {\ttfamily colour} an Position ({\ttfamily x}, {\ttfamily y}) ins Bild. 
+
+Falls {\ttfamily drawslow} auf {\ttfamily true} gesetzt ist, werden die Punkte verzögert gezeichnet. Falls {\ttfamily draw\+X\+OR} auf {\ttfamily true} gesetzt ist, werden die Punkte im X\+O\+R-\/\+Modus gefärbt, die Pixelfarbe also mit der Hintergrundfarbe kombiniert. 
+
+Definiert in Zeile 82 der Datei drawing.\+cc.
+
+
+
+Benutzt I\+O\+Thread\+::msleep().
+
+
+
+Wird benutzt von draw\+Point() und maindraw().
+
+\mbox{\Hypertarget{classDrawing_ace204fccbe188a6b9e8d524cc243f005}\label{classDrawing_ace204fccbe188a6b9e8d524cc243f005}} 
+\index{Drawing@{Drawing}!draw\+Point@{draw\+Point}}
+\index{draw\+Point@{draw\+Point}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Point()}{drawPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}}}]{p,  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{colour = {\ttfamily 0},  }\item[{bool}]{drawslow = {\ttfamily false},  }\item[{bool}]{draw\+X\+OR = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zeichnet einen Punkt der Farbe {\ttfamily colour} an Position {\ttfamily p} ins Bild. 
+
+Falls {\ttfamily drawslow} auf {\ttfamily true} gesetzt ist, werden die Punkte verzögert gezeichnet. Falls {\ttfamily draw\+X\+OR} auf {\ttfamily true} gesetzt ist, werden die Punkte im X\+O\+R-\/\+Modus gefärbt, die Pixelfarbe also mit der Hintergrundfarbe kombiniert. 
+
+Definiert in Zeile 116 der Datei drawing.\+h.
+
+
+
+Benutzt draw\+Point(), Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{classDrawing_ad449deed6b1939b2232158ce25d327ee}\label{classDrawing_ad449deed6b1939b2232158ce25d327ee}} 
+\index{Drawing@{Drawing}!draw\+Polygon@{draw\+Polygon}}
+\index{draw\+Polygon@{draw\+Polygon}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Polygon()}{drawPolygon()}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Polygon (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}} $>$ \&}]{e,  }\item[{bool}]{filled = {\ttfamily false},  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{fg = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{bg = {\ttfamily 255},  }\item[{bool}]{drawslow = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Zeichnet ein Polygon mit Ecken {\ttfamily e} ins Bild. 
+
+Der Rahmen hat die Farbe {\ttfamily fg}; falls {\ttfamily filled} auf {\ttfamily true} gesetzt ist, wird mit Farbe {\ttfamily bg} gefüllt. 
+
+Definiert in Zeile 134 der Datei drawing.\+cc.
+
+
+
+Benutzt I\+O\+Thread\+::msleep().
+
+\mbox{\Hypertarget{classDrawing_afa0ebabdcc81eb06d4b67e6bb83cdc4d}\label{classDrawing_afa0ebabdcc81eb06d4b67e6bb83cdc4d}} 
+\index{Drawing@{Drawing}!draw\+Text@{draw\+Text}}
+\index{draw\+Text@{draw\+Text}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{draw\+Text()}{drawText()}}
+{\footnotesize\ttfamily void Drawing\+::draw\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}}}]{pos,  }\item[{const std\+::string \&}]{text,  }\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{colour = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Zeichnet den Text {\ttfamily text} mit der Frabe {\ttfamily colour} an die Position {\ttfamily pos} ins Bild. 
+
+
+
+Definiert in Zeile 156 der Datei drawing.\+cc.
+
+
+
+Benutzt Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{classDrawing_a7bd4dcf4718cf46a73d11e63dc7bc876}\label{classDrawing_a7bd4dcf4718cf46a73d11e63dc7bc876}} 
+\index{Drawing@{Drawing}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int Drawing\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt die Hoehe des Bildes aus. 
+
+
+
+Definiert in Zeile 56 der Datei drawing.\+h.
+
+
+
+Benutzt img.
+
+
+
+Wird benutzt von Draw\+Window\+::change\+Drawing(), Draw\+Window\+::change\+Size() und Draw\+Window\+::set\+Zoom().
+
+\mbox{\Hypertarget{classDrawing_a8cdafb9ad4dfd4b54dc40ae753980177}\label{classDrawing_a8cdafb9ad4dfd4b54dc40ae753980177}} 
+\index{Drawing@{Drawing}!get\+Image@{get\+Image}}
+\index{get\+Image@{get\+Image}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{get\+Image()}{getImage()}}
+{\footnotesize\ttfamily const Q\+Image$\ast$ Drawing\+::get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Liefert Zeiger auf das enthaltene Image. 
+
+
+
+Definiert in Zeile 59 der Datei drawing.\+h.
+
+
+
+Benutzt img.
+
+
+
+Wird benutzt von Draw\+Window\+::paint\+Event().
+
+\mbox{\Hypertarget{classDrawing_ae3d1a4bb0a61a5bd64170abc154dd25c}\label{classDrawing_ae3d1a4bb0a61a5bd64170abc154dd25c}} 
+\index{Drawing@{Drawing}!get\+Mutex@{get\+Mutex}}
+\index{get\+Mutex@{get\+Mutex}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{get\+Mutex()}{getMutex()}}
+{\footnotesize\ttfamily Q\+Mutex$\ast$ Drawing\+::get\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Liefert Zeiger auf Mutex zum Sperren des Bildzugriffs. 
+
+
+
+Definiert in Zeile 62 der Datei drawing.\+h.
+
+
+
+Benutzt img\+Mutex.
+
+
+
+Wird benutzt von Draw\+Window\+::paint\+Event().
+
+\mbox{\Hypertarget{classDrawing_a7bd8894ca2d1a9e5cd4945ede17ca167}\label{classDrawing_a7bd8894ca2d1a9e5cd4945ede17ca167}} 
+\index{Drawing@{Drawing}!get\+Point\+Colour@{get\+Point\+Colour}}
+\index{get\+Point\+Colour@{get\+Point\+Colour}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{get\+Point\+Colour()}{getPointColour()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} Drawing\+::get\+Point\+Colour (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Liefert die Farbe des Pixels an Position ({\ttfamily x}, {\ttfamily y}) 
+
+
+
+Definiert in Zeile 71 der Datei drawing.\+cc.
+
+
+
+Wird benutzt von get\+Point\+Colour().
+
+\mbox{\Hypertarget{classDrawing_ad25dde1cf53c3858121f940ece8f9d96}\label{classDrawing_ad25dde1cf53c3858121f940ece8f9d96}} 
+\index{Drawing@{Drawing}!get\+Point\+Colour@{get\+Point\+Colour}}
+\index{get\+Point\+Colour@{get\+Point\+Colour}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{get\+Point\+Colour()}{getPointColour()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawColour}{Draw\+Colour}} Drawing\+::get\+Point\+Colour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{point2d_8h_aeeeb57e4186edb0a4274b64925e0d0fb}{I\+Point2D}}}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Liefert die Farbe des Pixels an Position {\ttfamily p}. 
+
+
+
+Definiert in Zeile 95 der Datei drawing.\+h.
+
+
+
+Benutzt get\+Point\+Colour(), Point2\+D$<$ T $>$\+::x und Point2\+D$<$ T $>$\+::y.
+
+\mbox{\Hypertarget{classDrawing_ad1272e2a9ec8cd0f69f5c42f9c95c6ce}\label{classDrawing_ad1272e2a9ec8cd0f69f5c42f9c95c6ce}} 
+\index{Drawing@{Drawing}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int Drawing\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt die Breite des Bildes aus. 
+
+
+
+Definiert in Zeile 53 der Datei drawing.\+h.
+
+
+
+Benutzt img.
+
+
+
+Wird benutzt von Draw\+Window\+::change\+Drawing(), Draw\+Window\+::change\+Size() und Draw\+Window\+::set\+Zoom().
+
+\mbox{\Hypertarget{classDrawing_add2536b3ea8de4f033cb53f0d66192b1}\label{classDrawing_add2536b3ea8de4f033cb53f0d66192b1}} 
+\index{Drawing@{Drawing}!load\+Image@{load\+Image}}
+\index{load\+Image@{load\+Image}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{load\+Image()}{loadImage()}}
+{\footnotesize\ttfamily void Drawing\+::load\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Lädt die Bilddatei {\ttfamily filename}. 
+
+
+
+Definiert in Zeile 56 der Datei drawing.\+cc.
+
+
+
+Benutzt Draw\+Ops\+::change\+Size() und Draw\+Ops\+::get\+Instance().
+
+
+
+Wird benutzt von maindraw().
+
+\mbox{\Hypertarget{classDrawing_a3ef33783605b7ecd7159bcdb2fdd9a02}\label{classDrawing_a3ef33783605b7ecd7159bcdb2fdd9a02}} 
+\index{Drawing@{Drawing}!makeanim@{makeanim}}
+\index{makeanim@{makeanim}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{makeanim()}{makeanim()}}
+{\footnotesize\ttfamily void Drawing\+::makeanim (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classDrawing}{Drawing}} $>$ \&}]{pics,  }\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{type,  }\item[{int}]{delay = {\ttfamily 4} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Erzeugt eine Animation namens {\ttfamily filename.\+type} aus den Einzelbildern in pics. 
+
+Falls {\ttfamily type} = {\ttfamily \char`\"{}gif\char`\"{}}, wird eine animierte gif-\/\+Datei erzeugt; falls {\ttfamily type} = {\ttfamily \char`\"{}mpg\char`\"{}} eine M\+P\+E\+G-\/\+Datei. {\ttfamily delay} ist bei gif-\/\+Animtionen der Zeitabstand zwischen zwei Bildern. 
+
+Definiert in Zeile 168 der Datei drawing.\+cc.
+
+\mbox{\Hypertarget{classDrawing_aef1c7b74a454594f18aebcc0a8c17b8c}\label{classDrawing_aef1c7b74a454594f18aebcc0a8c17b8c}} 
+\index{Drawing@{Drawing}!operator=@{operator=}}
+\index{operator=@{operator=}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawing}{Drawing}} \& Drawing\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDrawing}{Drawing}} \&}]{d2 }\end{DoxyParamCaption})}
+
+
+
+Zuweisungsoperator. 
+
+
+
+Definiert in Zeile 36 der Datei drawing.\+cc.
+
+
+
+Benutzt Draw\+Ops\+::change\+Size(), Draw\+Ops\+::get\+Instance() und img.
+
+\mbox{\Hypertarget{classDrawing_a530fbd926b17ea337b4a1c703d95e449}\label{classDrawing_a530fbd926b17ea337b4a1c703d95e449}} 
+\index{Drawing@{Drawing}!operator=@{operator=}}
+\index{operator=@{operator=}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDrawing}{Drawing}} \& Drawing\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrawColour}{Draw\+Colour}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Setzt das ganze Bild auf die Farbe {\ttfamily colour}. 
+
+
+
+Definiert in Zeile 46 der Datei drawing.\+cc.
+
+\mbox{\Hypertarget{classDrawing_a55355208f1dc677fd30806b170a14bcf}\label{classDrawing_a55355208f1dc677fd30806b170a14bcf}} 
+\index{Drawing@{Drawing}!save\+P\+GM@{save\+P\+GM}}
+\index{save\+P\+GM@{save\+P\+GM}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{save\+P\+G\+M()}{savePGM()}}
+{\footnotesize\ttfamily void Drawing\+::save\+P\+GM (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Speichert das Bild im pgm-\/\+Format in der Datei {\ttfamily filename}. 
+
+
+
+Definiert in Zeile 62 der Datei drawing.\+cc.
+
+\mbox{\Hypertarget{classDrawing_aae4e25704b69cef5d37a7c5db860336d}\label{classDrawing_aae4e25704b69cef5d37a7c5db860336d}} 
+\index{Drawing@{Drawing}!save\+P\+NG@{save\+P\+NG}}
+\index{save\+P\+NG@{save\+P\+NG}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{save\+P\+N\+G()}{savePNG()}}
+{\footnotesize\ttfamily void Drawing\+::save\+P\+NG (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Speichert das Bild im png-\/\+Format in der Datei {\ttfamily filename}. 
+
+
+
+Definiert in Zeile 68 der Datei drawing.\+cc.
+
+
+
+Wird benutzt von maindraw().
+
+\mbox{\Hypertarget{classDrawing_a8e6f3bd4617ef1f84635c6983a4840c1}\label{classDrawing_a8e6f3bd4617ef1f84635c6983a4840c1}} 
+\index{Drawing@{Drawing}!save\+P\+PM@{save\+P\+PM}}
+\index{save\+P\+PM@{save\+P\+PM}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{save\+P\+P\+M()}{savePPM()}}
+{\footnotesize\ttfamily void Drawing\+::save\+P\+PM (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Speichert das Bild im ppm-\/\+Format in der Datei {\ttfamily filename}. 
+
+
+
+Definiert in Zeile 65 der Datei drawing.\+cc.
+
+\mbox{\Hypertarget{classDrawing_a34754d4f4d6e129dae03f058d76dd43f}\label{classDrawing_a34754d4f4d6e129dae03f058d76dd43f}} 
+\index{Drawing@{Drawing}!set\+Sleep\+Time@{set\+Sleep\+Time}}
+\index{set\+Sleep\+Time@{set\+Sleep\+Time}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{set\+Sleep\+Time()}{setSleepTime()}}
+{\footnotesize\ttfamily void Drawing\+::set\+Sleep\+Time (\begin{DoxyParamCaption}\item[{int}]{milli }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setzt die Wartezeit für verzögertes Malen. 
+
+
+
+Definiert in Zeile 99 der Datei drawing.\+h.
+
+
+
+Benutzt sleep\+Milli.
+
+\mbox{\Hypertarget{classDrawing_a0f16d649365d717f01b141761d487cf4}\label{classDrawing_a0f16d649365d717f01b141761d487cf4}} 
+\index{Drawing@{Drawing}!set\+Zoom@{set\+Zoom}}
+\index{set\+Zoom@{set\+Zoom}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{set\+Zoom()}{setZoom()}}
+{\footnotesize\ttfamily void Drawing\+::set\+Zoom (\begin{DoxyParamCaption}\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+Ändert den Zoomfaktor für des Fensters, falls es angezeigt wird. 
+
+
+
+Definiert in Zeile 24 der Datei drawing.\+cc.
+
+
+
+Benutzt Draw\+Ops\+::get\+Instance(), Draw\+Window\+::get\+Instance() und Draw\+Ops\+::set\+Zoom().
+
+
+
+Wird benutzt von maindraw().
+
+\mbox{\Hypertarget{classDrawing_afbc865383cc38520bd094c6ad7ac2df7}\label{classDrawing_afbc865383cc38520bd094c6ad7ac2df7}} 
+\index{Drawing@{Drawing}!show@{show}}
+\index{show@{show}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Drawing\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Zeigt dieses Bild im Graphikfenster an, ersetzt bisherigen Fensterinhalt. 
+
+
+
+Definiert in Zeile 30 der Datei drawing.\+cc.
+
+
+
+Benutzt Draw\+Ops\+::get\+Instance() und Draw\+Ops\+::make\+Active().
+
+
+
+Wird benutzt von maindraw().
+
+\mbox{\Hypertarget{classDrawing_a7c4c84c4956ff577d5032f0c4b2991bd}\label{classDrawing_a7c4c84c4956ff577d5032f0c4b2991bd}} 
+\index{Drawing@{Drawing}!update@{update}}
+\index{update@{update}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Drawing\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Informiert das Zeichenfenster über Veränderungen. 
+
+
+
+Definiert in Zeile 33 der Datei drawing.\+cc.
+
+
+
+Benutzt Draw\+Ops\+::get\+Instance() und Draw\+Ops\+::update\+If\+Active().
+
+
+
+\subsubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classDrawing_a208988699d8af4c3f53ebad688bc42bf}\label{classDrawing_a208988699d8af4c3f53ebad688bc42bf}} 
+\index{Drawing@{Drawing}!default\+Sleep\+Milli@{default\+Sleep\+Milli}}
+\index{default\+Sleep\+Milli@{default\+Sleep\+Milli}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{default\+Sleep\+Milli}{defaultSleepMilli}}
+{\footnotesize\ttfamily const int Drawing\+::default\+Sleep\+Milli = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definiert in Zeile 26 der Datei drawing.\+h.
+
+\mbox{\Hypertarget{classDrawing_a8c2defb1fd8bab5ebc0b38da136f8e2b}\label{classDrawing_a8c2defb1fd8bab5ebc0b38da136f8e2b}} 
+\index{Drawing@{Drawing}!img@{img}}
+\index{img@{img}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{img}{img}}
+{\footnotesize\ttfamily Q\+Image Drawing\+::img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 24 der Datei drawing.\+h.
+
+
+
+Wird benutzt von Drawing(), get\+Height(), get\+Image(), get\+Width() und operator=().
+
+\mbox{\Hypertarget{classDrawing_a1a0a2569cbbab72dffcd088df14428de}\label{classDrawing_a1a0a2569cbbab72dffcd088df14428de}} 
+\index{Drawing@{Drawing}!img\+Mutex@{img\+Mutex}}
+\index{img\+Mutex@{img\+Mutex}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{img\+Mutex}{imgMutex}}
+{\footnotesize\ttfamily Q\+Mutex Drawing\+::img\+Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Definiert in Zeile 27 der Datei drawing.\+h.
+
+
+
+Wird benutzt von get\+Mutex().
+
+\mbox{\Hypertarget{classDrawing_a7a904cbe419acdcd9187f1334b0b632c}\label{classDrawing_a7a904cbe419acdcd9187f1334b0b632c}} 
+\index{Drawing@{Drawing}!sleep\+Milli@{sleep\+Milli}}
+\index{sleep\+Milli@{sleep\+Milli}!Drawing@{Drawing}}
+\paragraph{\texorpdfstring{sleep\+Milli}{sleepMilli}}
+{\footnotesize\ttfamily int Drawing\+::sleep\+Milli\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 25 der Datei drawing.\+h.
+
+
+
+Wird benutzt von set\+Sleep\+Time().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{drawing_8h}{drawing.\+h}}\item 
+\mbox{\hyperlink{drawing_8cc}{drawing.\+cc}}\end{DoxyCompactItemize}
