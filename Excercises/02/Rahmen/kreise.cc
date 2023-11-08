@@ -43,12 +43,12 @@ int maindraw()
       if (center.x < 0 || center.y < 0)
         break;
       pic1.show();
-      drawCircle(pic1, center, radius, false, colour);
+      drawCircle(pic1, center, radius, false, colour);  //Nicht Ausgefüllt
       cin.get();
       cout << "Weiter mit Return" << endl;
       cin.get();
       pic2.show();
-      drawCircle(pic2, center, radius, true, colour);
+      drawCircle(pic2, center, radius, true, colour);  //Ausgefüllt
       cout << "Weiter mit Return" << endl;
       cin.get();
 

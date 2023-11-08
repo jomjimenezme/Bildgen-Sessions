@@ -8,13 +8,28 @@
  
 using namespace std;
 
-//######################################################################
 // malt vier Punkte oder zwei Linien
 void drawEllipsePoints(Drawing& pic, int x, int y, int xcenter, int ycenter,
                        bool filled, int colour = 0)
 {
-  // HIER ERGÄNZEN
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  if (!filled)
+    {
+      pic.drawPoint(-x + xcenter,  y + ycenter, colour, true);
+      pic.drawPoint( x + xcenter,  y + ycenter, colour, true);
+      pic.drawPoint(-x + xcenter, -y + ycenter, colour, true);
+      pic.drawPoint( x + xcenter, -y + ycenter, colour, true);
+    }
+  else
+    {
+      pic.drawLine(-x + xcenter,  y + ycenter, x + xcenter,  y + ycenter,
+                   colour, true);
+      pic.drawLine(-x + xcenter, -y + ycenter, x + xcenter, -y + ycenter,
+                   colour, true);
+    }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
+
 
 //######################################################################
 // Scan Conversion für Ellipse

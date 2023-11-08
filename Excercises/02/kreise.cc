@@ -2,8 +2,6 @@
 
 #include <cppqt.h>
 
-using namespace std;
-
 void drawCirclePoints(Drawing& pic, int x, int y, IPoint2D center,
                       bool filled, int colour = 0)
 {
@@ -13,20 +11,27 @@ void drawCirclePoints(Drawing& pic, int x, int y, IPoint2D center,
   int ycenter = center.y;
   if (!filled)
     {
-     
+      pic.drawPoint(-x + xcenter,  y + ycenter, colour, true);
+      pic.drawPoint( x + xcenter,  y + ycenter, colour, true);
+      pic.drawPoint(-x + xcenter, -y + ycenter, colour, true);
+      pic.drawPoint( x + xcenter, -y + ycenter, colour, true);
+      pic.drawPoint(-y + xcenter,  x + ycenter, colour, true);
+      pic.drawPoint( y + xcenter,  x + ycenter, colour, true);
+      pic.drawPoint(-y + xcenter, -x + ycenter, colour, true);
+      pic.drawPoint( y + xcenter, -x + ycenter, colour, true);
     }
   else
     {
       int k;
       for (k = -x; k <= x; k++)
         {
-          pic.drawPoint(k + xcenter, y + ycenter, colour);
-          pic.drawPoint(k + xcenter, -y + ycenter, colour);
+          pic.drawPoint(k + xcenter, y + ycenter, colour, true);
+          pic.drawPoint(k + xcenter, -y + ycenter, colour, true);
         }
       for (k = -y; k <= y; k++)
         {
-          pic.drawPoint(k + xcenter, x + ycenter, colour);
-          pic.drawPoint(k + xcenter, -x + ycenter, colour);
+          pic.drawPoint(k + xcenter, x + ycenter, colour, true);
+          pic.drawPoint(k + xcenter, -x + ycenter, colour, true);
         }
       IOThread::msleep(40);
     }
@@ -56,7 +61,7 @@ void drawCircle(Drawing& pic, IPoint2D center, int radius, bool filled,
     }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
-
+using namespace std;
 int maindraw()
 {
   Drawing pic1(200, 200);
@@ -94,6 +99,7 @@ int maindraw()
 
   return 0;
 }
+
 
 /*
 (100,100) 25 100
