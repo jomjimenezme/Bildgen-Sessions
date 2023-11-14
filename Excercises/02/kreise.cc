@@ -68,9 +68,9 @@ int maindraw()
   Drawing pic2(200, 200);
 
   pic1.show();
-  pic1.setZoom(2);
+  pic1.setZoom(3);
   pic2.show();
-  pic2.setZoom(2);
+  pic2.setZoom(3);
 
   IPoint2D center;
   int radius;

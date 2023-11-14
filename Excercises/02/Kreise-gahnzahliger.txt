@@ -1,0 +1,28 @@
+Gefüllter Kreis:
+
+Diagonale Linien:
+Die Idee, diagonale Linien zu zeichnen, ist nur eine Fangfrage. Bei einer Drehung ist jede Linie innerhalb eines Kreises entweder horizontal oder vertikal.
+
+Horizontale Linien:
+Das haben wir in den Übungen gemacht. Wir haben 4 Linien gezeichnet, die die 8 symmetrischen Punkte verbinden (siehe Bild).
+
+Hinweis: Wir können die 8 Punkte auch verwenden, um 4 diagonale Linien zu zeichnen, aber wie wir gelernt haben, erfordert dies mehr Berechnungen.
+
+
+
+Das Problem, das wir mit dem Code hatten, war ein Tippfehler.
+
+
+while(y >= x){
+    drawCirclePoints(pic, x, y, center, filled, colour);
+    ++x;
+    if(d>=0){
+    d -= 8 * x +4;
+    }else{
+      --y;
+      d -= 8 + (x-y) + 4;   <------ Hier
+    }
+}
+
+
+Könnt ihr es erkennen?)

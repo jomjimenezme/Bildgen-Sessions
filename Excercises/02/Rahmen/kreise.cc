@@ -11,15 +11,54 @@ using namespace std;
 void drawCirclePoints(Drawing& pic, int x, int y, IPoint2D center,
                       bool filled, int colour = 0)
 {
-  // HIER ERGÄNZEN
+  int xcenter = center.x;
+  int ycenter = center.y;
+    if(!filled){
+      pic.drawPoint(-x + xcenter,  y + ycenter, colour, true);
+      pic.drawPoint( x + xcenter,  y + ycenter, colour, true);
+      pic.drawPoint(-x + xcenter, -y + ycenter, colour, true);
+      pic.drawPoint( x + xcenter, -y + ycenter, colour, true);
+      pic.drawPoint(-y + xcenter,  x + ycenter, colour, true);
+      pic.drawPoint( y + xcenter,  x + ycenter, colour, true);
+      pic.drawPoint(-y + xcenter, -x + ycenter, colour, true);
+      pic.drawPoint( y + xcenter, -x + ycenter, colour, true);
+    }
+    else{
+     int k;
+
+      for (k = -x; k <= x; k++)
+        {
+          pic.drawPoint(k + xcenter, y + ycenter, colour, true);
+          pic.drawPoint(k + xcenter, -y + ycenter, colour, true);
+        }
+      for (k = -y; k <= y; k++)
+        {
+          pic.drawPoint(k + xcenter, x + ycenter, colour, true);
+          pic.drawPoint(k + xcenter, -x + ycenter, colour, true);
+        }
+    }
+
 }
 
 void drawCircle(Drawing& pic, IPoint2D center, int radius, bool filled,
                 int colour = 0)
 {
-  // zeichnet einen Kreis um center mit Radius radius
+  int x=0;
+  int y = radius;
+  int d = 4*radius - 5;
 
-  // HIER ERGÄNZEN
+  while(y >= x){
+    drawCirclePoints(pic, x, y, center, filled, colour);
+    ++x;
+    if(d>=0){
+     d -= 8*x+4;
+    }else{
+      --y;
+      d-= 8*(x-y)+4;
+    }
+  }
+
+
 }
 
 int maindraw()
@@ -39,7 +78,7 @@ int maindraw()
   while (true)
     {
       cout << "Eingabe von center, radius, colour: ";
-      cin >> center >> radius >> colour;
+      cin >> center >> radius >> colour;// (100,100), 50,
       if (center.x < 0 || center.y < 0)
         break;
       pic1.show();

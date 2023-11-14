@@ -28,10 +28,10 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
     nv = -1.0 * nv;                      // dann zeigt nv nicht nach unten
 
   nv = nv / norm(nv);                    // normiere nv
-  
-  
-  
-  // Eckpunkte mittels Normalenvektor berechnen
+
+
+
+  // berechnen wir die Eckpunkte mittels Normalvektor
   p11 = static_cast<double>(f) * (p1 - 0.5 * w * nv);
   p12 = static_cast<double>(f) * (p1 + 0.5 * w * nv);
   p21 = static_cast<double>(f) * (p2 - 0.5 * w * nv);
@@ -39,7 +39,7 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
   // nv zeigt immer nach oben, deshalb liegt p11 unterhalb von p12 und
   // p21 unterhalb von p22.
 
-  
+
   //ymin un ymax in f-fach Raster
   double yminf = p11.y;
   double ymaxf = p22.y;
@@ -48,37 +48,34 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
   // Anzahl Zeilen im feinen Raster
   // Selbst für ymaxf == 0 wird immernoch eine Zeile benötigt.
   int numrows = static_cast<int>(ceil(ymaxf)) + 1;
-  
-    
+
+
   // Linker und rechter Rand der Linie im feinen Raster.<<<
-  //Initialisiere so, dass die Ränder sukzessive aktualisiert werden können, 
+  //Initialisiere so, dass die Ränder sukzessive aktualisiert werden können,
   //denn es ist nicht bekannt ob eine Seite des Rechtecks „links“ bzw.
   // „rechts“ liegt.
   vector<int> linkerrand(numrows, numeric_limits<int>::max());   //aller_werte=MAX_INT
-  vector<int> rechterrand(numrows, -1);
+  vector<int> rechterrand(numrows, -1); //vector mit Anzahl Zeilen Elementen, alle =-1
   int y;
   double x;
   double einsdurchm;
 
-  
-  
-  // Bestimme nun anhand der 4 Rechteckseiten für jede Bildzeile im feinen
-  // Raster den x-Bereich.
+
+  // We will simply compute the edges of the big rectangle.
+  // Bestimmen wir den x-Bereich für jede Bildzeile im feinen Raster den x-Bereich.
   // Ob eine Seite des Rechtecks „links“ bzw. „rechts“ liegt, ist unbekannt.
-  // Im Allgemeinen werden die Bereiche [p11.y,p12.y], [p11.y,p21.y],
-  // [p21.y,p22.y] und [p12.y, p22.y] überlappen.
-  if (p1.x != p2.x)
+  if (p1.x != p2.x) //Linie ist nicht vertical
     {
       // Bereich zwischen p11.y und p12.y
       einsdurchm = (p11.x - p12.x) / (p11.y - p12.y);
       x = p11.x + (ceil(p11.y) - p11.y) * einsdurchm;
       for (y = static_cast<int>(ceil(p11.y)); y <= floor(p12.y); ++y)
         {
-          linkerrand[y] = min(linkerrand[y], static_cast<int>(round(x)));  //MAX vs x
+          linkerrand[y] = min(linkerrand[y], static_cast<int>(round(x)));
           rechterrand[y] = max(rechterrand[y], static_cast<int>(round(x)));
           x += einsdurchm;
         }
-                
+
       // Bereich zwischen p21.y und p22.y
       einsdurchm = (p21.x - p22.x) / (p21.y - p22.y);
       x = p21.x + (ceil(p21.y) - p21.y) * einsdurchm;
@@ -89,9 +86,9 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
           x += einsdurchm;
         }
     }
-    
-        
-    
+
+
+
   if (p1.y != p2.y)
     {
       // Bereich zwischen p11.y und p21.y
@@ -114,15 +111,16 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
         }
     }
 
-        
-    
-  // y-Bereich im Original-Raster
+
+
+  // Konvertiert y-Bereich von verfeinerten Raster im Original-Raster
   int ymin = static_cast<int>(round(1.0 / f * yminf));
   int ymax = static_cast<int>(round(1.0 / f * ymaxf));
   // Für jedes Pixel der ursprünglichen Pixelzeile, summiere die
   // Intensitäten innerhalb dieser Zeile.
   // Ein Pixel mehr, für Rechenungenauigkeiten.
   vector<int> xx(xmax + 1, 0);
+
   int xxmin, xxmax;
   int xi, xf, xfend, z;
 
