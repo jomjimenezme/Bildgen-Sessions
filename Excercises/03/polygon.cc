@@ -2,7 +2,6 @@
 #include <iostream>
 #include <list>
 #include <vector>
-
 #include <cppqt.h>
 
 using namespace std;
@@ -122,6 +121,7 @@ void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
       // fügen wir alle Kanten, die in der Zeile y beginnen, sortiert ein.
       kitety = et[y].begin();
       kitaet = aet.begin();
+
       /*Wir starten eine while-Schleife, die so lange läuft, bis entweder
        * alle Kanten an der aktuellen y-Koordinate in der Kantentabelle oder
        * alle Kanten in der aktiven Kantentabelle verarbeitet sind.*/
@@ -142,6 +142,9 @@ void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
       while (kitety != et[y].end())
         aet.push_back(*kitety++);
 
+
+
+
       /* Wir entfernen alle bei y endenden Kanten aus der AET.
        * Das Entfernen ist notwendig, um die Spans zwischen Paaren
        * von Kanten der AET malen zu können. Dieser Fall tritt immer dann
@@ -153,20 +156,17 @@ void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
           kitaet = aet.erase(kitaet);
         else
           ++kitaet;
-
       /*
        * Male Pixel der einzelnen Spans. Spans werden immer
        * zwischen Paaren von Kanten aus der AET gemalt.
        */
-      for (kitaet = aet.begin(); kitaet != aet.end(); )
-        {
+      for (kitaet = aet.begin(); kitaet != aet.end(); ){
           xanf = (kitaet++)->x;// wir nehmen x,  und dann inkrementiert den Iterator
           xend = (kitaet++)->x;
           for (int x = static_cast<int>(round(xanf));
                x <=  static_cast<int>(round(xend)); ++x)
             pic.drawPoint(x, y, colour, false);
         }
-
       /*
        * Aktualisiere die x-Werte aller Kanten in AET.
        */

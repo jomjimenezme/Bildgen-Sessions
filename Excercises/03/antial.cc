@@ -17,7 +17,6 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
     if (p1.y > p2.y)
         swap(p1, p2);                        // dann ist p2 der obere Punkt
 
-
   DPoint2D p11, p12, p21, p22;           // Eckpunkte des Linienrechtecks im
                                          // feineren Raster
   DPoint2D nv(p2.y - p1.y, p1.x - p2.x); // Normalenvektor (zeigt erstmal immer
@@ -28,8 +27,6 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
     nv = -1.0 * nv;                      // dann zeigt nv nicht nach unten
 
   nv = nv / norm(nv);                    // normiere nv
-
-
 
   // berechnen wir die Eckpunkte mittels Normalvektor
   p11 = static_cast<double>(f) * (p1 - 0.5 * w * nv);
@@ -89,6 +86,8 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
 
 
 
+
+
   if (p1.y != p2.y)
     {
       // Bereich zwischen p11.y und p21.y
@@ -109,19 +108,17 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
           rechterrand[y] = max(rechterrand[y], static_cast<int>(round(x)));
           x += einsdurchm;
         }
-    }
-
-
+    }//endif
 
   // Konvertiert y-Bereich von verfeinerten Raster im Original-Raster
   int ymin = static_cast<int>(round(1.0 / f * yminf));
   int ymax = static_cast<int>(round(1.0 / f * ymaxf));
   // Für jedes Pixel der ursprünglichen Pixelzeile, summiere die
-  // Intensitäten innerhalb dieser Zeile.
-  // Ein Pixel mehr, für Rechenungenauigkeiten.
+  // Intensitäten innerhalb dieser Zeile.  // Ein Pixel mehr, für Rechenungenauigkeiten.
   vector<int> xx(xmax + 1, 0);
 
-  int xxmin, xxmax;
+
+  int xxmin, xxmax;  //T. Var
   int xi, xf, xfend, z;
 
   // Schleife über die Zeilen des Originalbildes
@@ -149,7 +146,8 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
               for ( ; xf <= xfend; ++xf)
                 xx[xf / f] += 1;
             }
-        }
+        }//endfor
+
       // Wenn Zeile nicht leer
       if (xxmin <= xxmax)
         // Schleife über den zu zeichnenden Bereich in Zeile y, in echten Pixeln
