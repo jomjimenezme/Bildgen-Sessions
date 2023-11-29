@@ -37,41 +37,35 @@ struct Kante
 };
 
 
+typdef list<kante> KantenTabelle;
 
 void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
                        int colour = 0)
 {
+  ymin = pic.getHeight() + 1;
+  ymax = -1;
+
+  int n = ecken.size();
+
+  for (unsigned int i=0; i<n; i++){
+   if(ecke[i].y< ymin)
+    ymin = ecke[i].y;
+   if(ecke[i].y> ymax)
+    ymax = ecken[i].y;
+  }
+
+  KantenTabelle aet(0);
+
+  vector<KantenTabelle> et (ymax+1);
 
 
+  KantenTabelle::iterator kitaet;
+  KantenTabelle::iterator kitety;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  //t.v
+  Kante k;
+  int kymin;
+  double xanf; xend;
 
 
 
@@ -82,32 +76,27 @@ void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
    * 3. Wir fügen die Kante entsprechend ihrer y-Koordinate in die Liste ein.
    */
 
+  for(unsigned int i=0; i<n; i++)
+  {
+   if(ecken[i].y != ecken[i+1].y)
+   {
+     if(ecken[i].y < ecken[i+1].y){
+       k.ymax =  ecken[i+1].y;
+       k.x = ecken[i].x;
+       kymin = ecken[i].y;
+     }
+     else{
+       k.ymax =  ecken[i].y;
+       k.x = ecken[i+1].x;
+       kymin = ecken[i+1].y;
+     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    k.einsdurchm = (ecken[i+1].x-ecken[i].x)/(ecken[i+1].y-ecken[i].y);  //dx/dy
+    et[kymin].pushback(k);
+   }
+ }
 
 
   /*
@@ -132,6 +121,56 @@ void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
         (ecken[0].y - ecken[n - 1].y);
       et[kymin].push_back(k);
     }
+
+    for(int y = ymin; y<ymax; y++ )
+      et[y].sort();
+
+
+    for(int y = ymin; y<ymax; y++ ){
+     kitety = et[y].begin();
+     kitaet = aet.begin();
+
+
+     while(kitety != et[y].end() && kitaet != aet.end){
+       if(*ktaet< *kitety)
+          ++kitaet;
+       else{
+        aet.insert(kitaet, *kitety);
+        ++kitety;
+       }
+     }
+
+     //verbleibenden kanten in et[y]?
+     while(kitety != et[y].end()){
+      aet.push_back(*kitety++);
+     }
+
+     for(kitaet = aet.begin(); kitaet!=end;)
+     {
+      if(kitaet->ymax ==y)
+        kitaet = aet.erase(kitaet);
+
+      else
+        ++kitaet;
+
+     }
+
+    for(kitaet = aet.begin(); kitaet!=end;){
+     xanf = (kitaet++).x;
+     xend = (kitaet++).x;
+     for (int x = static_cast<int>(round(xanf)); x<= static_cast<int>(round(xend)); x++)
+       pic.drawPoint(x,y, colour, false);
+
+    }
+
+     //x werte aller Kanten in AET aktualisieren;
+     for(kitaet = aet.begin(); kitaet.end(); kitaet++)
+       kitaet->x += kitaet->einsdurchm;
+
+    }
+
+
+
 
 
 }

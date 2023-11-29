@@ -1,9 +1,9 @@
 #!/bin/bash
-for i in ../modelle/*.in
+for i in modelle/*.in
 do
     b=`basename $i .in`
     shopt -s nullglob
-    for j in ../modelle/$b*.info
+    for j in modelle/$b*.info
     do
         d=`basename $j .info`
         echo $j

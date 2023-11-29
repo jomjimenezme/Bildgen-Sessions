@@ -15,6 +15,25 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
 {
   // HIER ERGÄNZEN
 
+  if(p1.y> p2.y)  //p2 ist der obere Punkte
+    swap(p1 , p2);
+
+
+  DPoint2D p11, p12, p21, p22;
+
+  nv(p2.y-p1.y, p1.x-p2.x);
+
+  if(nv.y< 0)
+    nv = -1.0*nv;
+
+  nv = nv/norm(nv);
+
+  p11 =    (p1-0.5*nv);
+  p12 =    (p1+0.5*nv);
+  p21 =    (p2-0.5*nv);
+  p22 =    (p2+0.5*nv);
+
+
 
 
 

@@ -59,7 +59,7 @@ void drawSnowmanParts(bool outline)
   DrawColour orange(255, 45, 45);
 
   if (outline)
-    {
+      {
       glPolygonMode(GL_FRONT,GL_LINE);
       glPolygonMode(GL_BACK,GL_LINE);
       glPolygonOffset(2, 2);                          // z-buffer offset
