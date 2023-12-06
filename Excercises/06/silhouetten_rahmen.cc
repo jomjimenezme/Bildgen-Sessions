@@ -1,4 +1,6 @@
-
+// Silhouetten-Algorithmus
+// Autor:  Sebastian Birk, Martin Galgon, Holger Arndt
+// Datum:  02.12.2015
 
 #include <algorithm>
 #include <cmath>
@@ -23,28 +25,16 @@ DPoint2D homTo2D(const Vec4D& v)
 Matrix4x4 berechneMpar(double umin, double umax, double vmin, double vmax,
                        double& ratio)
 {
- 
-  Matrix4x4 spar;
-  spar.el[0][0] = spar.el[1][1] = spar.el[3][3] = 1;
-  spar.el[0][2] = -sqrt(3) / 4.0;
-  spar.el[1][2] =     -1.0 / 4.0;
-
-  
-  Matrix4x4 transl;
-  transl.el[0][0] = transl.el[1][1] = transl.el[2][2] = transl.el[3][3] = 1;
-  transl.el[0][3] = -umin;
-  transl.el[1][3] = -vmin;
-
-  
-  Matrix4x4 scale;
-  scale.el[0][0] = 1 / (umax - umin);
-  scale.el[1][1] = 1 / (vmax - vmin);
-  scale.el[2][2] = scale.el[3][3] = 1;
+  // Erzeugt die Matrix zur Parallelprojektion in gegebener Richtung
+  // mit gegebenem Projektionsfenster [umin; umax] × [vmin; vmax]
+  // in das Einheitsquadrat
+  //
+  // Ausgabe:
+  //   ratio   Seitenverhältnis des Projektionsfensters
 
   Matrix4x4 mpar;
-  mpar = scale * transl * spar;
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  // HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   ratio = (umax - umin) / (vmax - vmin);
 
@@ -86,21 +76,8 @@ void erzeugeKurven(double xmin, double xmax, double zmin, double zmax,
       // „hinten“ nach „vorne“.
       kurven[num - z - 1].resize(pieces + 1);
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+      // HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-      // z-Koordinate des Punktes.
-      double posz = zmin + (zmax - zmin) * static_cast<double>(z) / num;
-
-      // Einzelne Kurve, konstantes z, verbundene Punkte in x.
-      for (int x = 0; x < pieces + 1; ++x)
-        {
-          // x-Koordinate des Punktes.
-          double posx = xmin + (xmax - xmin) * static_cast<double>(x) / pieces;
-
-          // Speichere rückwärts, s.o.
-          kurven[num - z - 1][x] = Vec3D(posx, func(posx, posz), posz);
-        }
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     }
 }
 
@@ -124,9 +101,9 @@ void maleSilhouetten(Drawing& pic,
 
   // Seitenverhältnis des Fensters. Wenn das Fenster und
   // [umin; umax] × [vmin; vmax] dasselbe Verhältnis haben, kann einfach
-  // skaliert werden. Falls nicht, muss angepasst werden.
+  // skaliert werden. Falls nicht, muss angepasst werden.           [MG]
   double wratio = static_cast<double>(pic.getWidth())
-                / static_cast<double>(pic.getHeight());
+    / static_cast<double>(pic.getHeight());
 
   if (ratio > wratio)
     {
@@ -154,10 +131,10 @@ void maleSilhouetten(Drawing& pic,
     };
 
   // Male [umin; umax] × [vmin; vmax]
-//   pic.drawLine(0+shix,  0+shiy,  0+shix  ,hei+shiy);
-//   pic.drawLine(0+shix,  0+shiy,  wid+shix,0+shiy  );
-//   pic.drawLine(wid+shix,0+shiy,  wid+shix,hei+shiy);
-//   pic.drawLine(0+shix,  hei+shiy,wid+shix,hei+shiy);
+  //   pic.drawLine(0+shix,  0+shiy,  0+shix  ,hei+shiy);
+  //   pic.drawLine(0+shix,  0+shiy,  wid+shix,0+shiy  );
+  //   pic.drawLine(wid+shix,0+shiy,  wid+shix,hei+shiy);
+  //   pic.drawLine(0+shix,  hei+shiy,wid+shix,hei+shiy);
 
   // Schleife über die Kurven
   IPoint2D pl, pr;
@@ -192,60 +169,9 @@ void maleSilhouetten(Drawing& pic,
                 * static_cast<double>(pr.y - pl.y) / (pr.x - pl.x);
 
               // Fälle unterscheiden (siehe S. 6-44)
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-              if ((konturmin[x] >= yl && konturmin[x+1] >= yr)
-                  || (konturmax[x] <= yl && konturmax[x+1] <= yr))
-                {
-                  // Fall 1: beide auf selber Seite der Kontur
-                  pic.drawLine(x, round(yl), x + 1, round(yr));
-                  konturmin[x] = min(konturmin[x], yl);
-                  konturmin[x + 1] = min(konturmin[x + 1], yr);
-                  konturmax[x] = max(konturmax[x], yl);
-                  konturmax[x + 1] = max(konturmax[x + 1], yr);
-                }
-              if (yl < konturmin[x])
-                {
-                  // Fall 2/3-1: alt (x, yl) unterhalb Kontur
-                  schnitt = static_cast<double>(konturmin[x] - yl)
-                    / (yr - yl - konturmin[x + 1] + konturmin[x]);
-                  if (schnitt >= 0 && schnitt <= 1)
-                    pic.drawLine(x, round(yl), round(x + schnitt),
-                                 round(yl + schnitt * (yr - yl)));
-                  konturmin[x] = yl;
-                }
-              if (yl > konturmax[x])
-                {
-                  // Fall 2/3-2: alt (x, yl) oberhalb Kontur
-                  schnitt = static_cast<double>(konturmax[x] - yl)
-                    / (yr - yl - konturmax[x + 1] + konturmax[x]);
-                  if (schnitt >= 0 && schnitt <= 1)
-                    pic.drawLine(x, round(yl), round(x + schnitt),
-                                 round(yl + schnitt * (yr - yl)));
-                  konturmax[x] = yl;
-                }
-              if (yr < konturmin[x + 1])
-                {
-                  // Fall 2/3-3: neu (x + 1, yl) unterhalb Kontur
-                  schnitt = static_cast<double>(konturmin[x] - yl)
-                    / (yr - yl - konturmin[x + 1] + konturmin[x]);
-                  if (schnitt >= 0 && schnitt <= 1)
-                    pic.drawLine(round(x + schnitt),
-                                 round(yl + schnitt * (yr - yl)), x + 1,
-                                 round(yr));
-                  konturmin[x + 1] = yr;
-                }
-              if (yr > konturmax[x + 1])
-                {
-                  // Fall 2/3-4: neu (x + 1, yl) oberhalb Kontur
-                  schnitt = static_cast<double>(konturmax[x] - yl)
-                    / (yr - yl - konturmax[x + 1] + konturmax[x]);
-                  if (schnitt >= 0 && schnitt <= 1)
-                    pic.drawLine(round(x + schnitt),
-                                 round(yl + schnitt * (yr - yl)), x + 1,
-                                 round(yr));
-                  konturmax[x + 1] = yr;
-                }
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+              // HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
               // Fall 4: beide innerhalb der Kontur
               // nichts tun
 

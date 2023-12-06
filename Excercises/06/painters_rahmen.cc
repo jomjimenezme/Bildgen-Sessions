@@ -62,7 +62,7 @@ void erzeugeFlaeche(double xmin, double xmax, double zmin, double zmax, int num,
   //            weil sie einfach überzeichnen und kein z-Buffer verwendet wird.
   //
   // Eingabe:
-  //   xmin, xmax, zmin, zmax - Ausdehnung der Fläche
+  //   xmin, xmax, zmin, zmax - Ausdehnung der Fläche  //Surface extension<
   //   num                    - Anzahl der Flächen-Stücke in jede Richtung
   //                          - Jedes Flächen-Stück besteht aus zwei Dreiecken.
   //   func                   - auszuwertende Funktion: y = func(x, z)

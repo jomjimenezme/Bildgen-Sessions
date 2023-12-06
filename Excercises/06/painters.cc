@@ -115,11 +115,6 @@ void erzeugeFlaeche(double xmin, double xmax, double zmin, double zmax, int num,
     {
       for (int x = 0; x < num; ++x)
         {
-          // Nur für die Färbung: bilde ab 0 ↦ 0 und num ↦ 1, jeweils für
-          // x und z. Die Steigung ist dann 1/num.
-          // Skalierung von [0; 1] auf [0; 255] erfolgt später.
-          double xval = static_cast<double>(x) / num;
-          double zval = static_cast<double>(z) / num;
 
           // Jedes Viereck besteht aus zwei Dreiecken.
           Dreieck d1, d2;
@@ -147,7 +142,11 @@ void erzeugeFlaeche(double xmin, double xmax, double zmin, double zmax, int num,
           d2.ecke[0] = p2;
           d2.ecke[1] = p4;
           d2.ecke[2] = p3;
-
+          // Nur für die Färbung: bilde ab 0 ↦ 0 und num ↦ 1, jeweils für
+          // x und z. Die Steigung ist dann 1/num.
+          // Skalierung von [0; 1] auf [0; 255] erfolgt später.
+          double xval = static_cast<double>(x) / num;
+          double zval = static_cast<double>(z) / num;
           // Farbe. Rot in x-Richtung, Grün in z-Richtung, Blau invers in
           // beide Richtungen.
           d1.col = DrawColour(255 * xval, 255 * zval,

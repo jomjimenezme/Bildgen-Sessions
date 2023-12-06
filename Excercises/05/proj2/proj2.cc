@@ -35,6 +35,10 @@ bool clip3D1(Vec3D& anf, Vec3D& end, double t1, double t2)
   return true;
 }
 
+
+
+
+
 bool clip3D2(Vec3D& anf, Vec3D& end, double t1, double t2)
 {
   // Clipping-Hilfsfunktion
@@ -66,7 +70,7 @@ bool clip3D(Vec3D& anf, Vec3D& end, double zmin)
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   //Wichstigte hier: Schnitpunkte t1, t2.
   double t1, t2; 
-  //------------------------ 1. z in [-1; zmin]-----------------------------
+  //------------------------ a). z in [-1; zmin]-----------------------------
     // allgemeiner Fall
     // z = -1 --> -1 = z0+t(z1-z0) --> t = (z0+1)/-(z1-z0)
     t1 = (anf.el[2] + 1) / (anf.el[2] - end.el[2]);
@@ -80,7 +84,7 @@ bool clip3D(Vec3D& anf, Vec3D& end, double zmin)
   if (anf.el[2] > end.el[2])
     swap(anf, end);
 
-  //------------------------ 2. x in [z; -z]---------------------------
+  //------------------------ b). x in [z; -z]---------------------------
 
     // allgemeiner Fall
     // x = z --> x0+t(x1-x0) = z0+t(z1-z0) --> t = (z0-x0)/((x1-x0)-(z1-z0))
