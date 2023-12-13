@@ -45,7 +45,7 @@ VecRGB berechneBeleuchtung(const Vec3D& ecke, const Vec3D& normale,
 
   // Diffus
   double dotNL = skalarprod(normale, l1);
-  double lambert = max(0.0, dotNL);
+  double lambert = max(0.0, dotNL);// immer großer als 0
   VecRGB diffuse = lambert * lightDiffuse * materialDiffuse;
 
   // winkelabhängige Reflexion

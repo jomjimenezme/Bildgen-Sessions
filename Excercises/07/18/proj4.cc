@@ -57,7 +57,7 @@ int maindraw()
   // da es bis hier u.u. lange gedauert hat, Ergebnis verewigen
   pic.savePNG("proj4.png");
 
-  IOThread::waitForWindow(60);
+  IOThread::waitForWindow(5);
 
   return 0;
 }
