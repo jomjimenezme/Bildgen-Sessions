@@ -59,22 +59,6 @@ void erzeugeKurven(double xmin, double xmax, double zmin, double zmax,
                    const std::function<double(double,double)>& func,
                    std::vector<std::vector<Vec3D>>& kurven )
 {
-  // Ausgabe:
-  //   Der vector kurven enthält die num darzustellenden Kurven des
-  //   Silhouetten-Plots.
-  //   Jede der num Kurven ist als ein std::vector gespeichert, der pieces
-  //   Punkte (x, func(x, z), z) als Vec3D enthält.
-  //   wichtig: Die Kurven müssen von vorne nach hinten gezeichnet werden, weil
-  //            die hinter der bereits gezeichneten Kontur liegenden Kurven
-  //            nicht dargestellt werden.
-  //
-  // Eingabe:
-  //   xmin, xmax, zmin, zmax - Ausdehnung des Parameterrechtecks
-  //   num                    - Anzahl der Kurven
-  //   pieces                 - Anzahl der Strecken aus denen jede Kurve
-  //                            zusammengesetzt wird
-  //   func                   - auszuwertende Funktion: y = func(x, z)
-
   kurven.clear();
   kurven.resize(num);
 

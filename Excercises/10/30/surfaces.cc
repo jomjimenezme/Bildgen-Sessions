@@ -163,7 +163,7 @@ int maindraw()
 
   pic.savePNG("surfaces.png");
 
-  IOThread::waitForWindow(60);
+  IOThread::waitForWindow(15);
 
   return 0;
 }

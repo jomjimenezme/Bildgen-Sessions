@@ -11,7 +11,7 @@ do
     do
         d=`basename $j .info`
         echo $j
-        cat $i $j | proj3
+        cat $i $j | ./proj3
         cp -f proj3.png proj3_$d.png
     done
 done

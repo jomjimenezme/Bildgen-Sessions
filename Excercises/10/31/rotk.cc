@@ -157,7 +157,7 @@ int maindraw()
 
   pic.savePNG("rotk.png");
 
-  IOThread::waitForWindow(60);
+  IOThread::waitForWindow(15);
 
   return 0;
 }

@@ -153,7 +153,7 @@ int maindraw()
       pics[i] = pic;
     }
   
-  Drawing::makeanim(pics, "blume", "gif", 15);
+  Drawing::makeanim(pics, "blume", "gif", 30);
   //Drawing::makeanim(pics, "blume", "mpg");
   
   return 0;

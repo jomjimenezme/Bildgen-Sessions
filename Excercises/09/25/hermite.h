@@ -24,8 +24,8 @@ void maleHermiteKurve( Drawing& pic, DPoint2D p1, DPoint2D p4, DPoint2D r1,
   cy[2] = r1.y;
   cy[3] = p1.y;
 
-  end.x = p1.x;
-  end.y = p2.y;
+  end.x = cx[3];
+  end.y = cy[3];
   for (i = 1; i <= n; i++)
   {
     t = ninv * i;
