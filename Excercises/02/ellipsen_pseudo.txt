@@ -1,0 +1,36 @@
+
+//Region1:
+x := 0                                  //Startpunkt (0,b)
+ý := b
+d1 := b - (b/a)^2 - 1/4                 //= d1(0)
+
+solange a^2y >= b^2x                    //Noch in Region 1
+   modifiziere die 4 zu (x,ý) gehoerigen Pixel
+   x := x + 1
+   wenn d1 >= 0
+      d1 := d1 - (b/a)^2 * (2x + 3)     //O
+   sonst
+      ý := ý - 1                        //SO
+      d1 := d1 - (b/a)^2 * (2x + 3) + 2ý
+
+//Region2:
+x := a                                  //Startpunkt (a,0)
+ý := 0
+d2 := a - (a/b)^2 - 1/4                 //= d2(0)
+
+solange b^2x >= a^2y                    //Noch in Region 2
+   modifiziere die 4 zu (x,ý) gehoerigen Pixel
+   ý := ý + 1
+   wenn d2 >= 0
+      d2 := d2 - (a/b)^2 * (2ý + 3)     //S (man beachte die Spiegelung!)
+   sonst
+      x := x - 1                        //SO (s.o.)
+      d2 := d2 - (a/b)^2 * (2ý + 3) + 2x
+
+
+
+
+b)
+
+Skaliere d1 mit 4a^2 und dementsprechend d2 mit 4b^2
+

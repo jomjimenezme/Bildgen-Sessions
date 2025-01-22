@@ -28,13 +28,13 @@ inline void drawPointZ (Drawing& pic, int x, int y, double z,
   // aktualisiert.
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
+// Befindet sich der neue Punkt vor dem zuvor gezeichneten Punkt?
   if (   x < 0 || x >= static_cast<int>(zbuf.size())
       || y < 0 || y >= static_cast<int>(zbuf[0].size()))
     return;
 
   if (z > zbuf[x][y])
-  {
+  {  //Ja? ok. Zeichden Punkt und aktualisier den Puffer
     pic.drawPoint(x, y, colour);
     zbuf[x][y] = z;
   }

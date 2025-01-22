@@ -308,7 +308,7 @@ int maindraw()
   double xmax = 5;
   double zmin = -5;
   double zmax = 5;
-  int num = 30;
+  int num = 10;
 
   auto func = [](double s, double t)
     //{ return 10 * exp(-(s * s / 25 + t * t / 100)); };

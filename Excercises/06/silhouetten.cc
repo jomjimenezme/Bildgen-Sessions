@@ -189,7 +189,7 @@ void maleSilhouetten(Drawing& pic,
                 }
               if (yl < konturmin[x])
                 {
-                  // Fall 2/3-1: alt (x, yl) unterhalb Kontur
+                  // Fall 2/3-a: alt (x, yl) unterhalb Kontur
                   schnitt = static_cast<double>(konturmin[x] - yl)
                     / (yr - yl - konturmin[x + 1] + konturmin[x]);
                   if (schnitt >= 0 && schnitt <= 1)
@@ -199,7 +199,7 @@ void maleSilhouetten(Drawing& pic,
                 }
               if (yl > konturmax[x])
                 {
-                  // Fall 2/3-2: alt (x, yl) oberhalb Kontur
+                  // Fall 2/3-b: alt (x, yl) oberhalb Kontur
                   schnitt = static_cast<double>(konturmax[x] - yl)
                     / (yr - yl - konturmax[x + 1] + konturmax[x]);
                   if (schnitt >= 0 && schnitt <= 1)
@@ -209,7 +209,7 @@ void maleSilhouetten(Drawing& pic,
                 }
               if (yr < konturmin[x + 1])
                 {
-                  // Fall 2/3-3: neu (x + 1, yl) unterhalb Kontur
+                  // Fall 2/3-c: neu (x + 1, yr) unterhalb Kontur
                   schnitt = static_cast<double>(konturmin[x] - yl)
                     / (yr - yl - konturmin[x + 1] + konturmin[x]);
                   if (schnitt >= 0 && schnitt <= 1)
@@ -220,7 +220,7 @@ void maleSilhouetten(Drawing& pic,
                 }
               if (yr > konturmax[x + 1])
                 {
-                  // Fall 2/3-4: neu (x + 1, yl) oberhalb Kontur
+                  // Fall 2/3-4: neu (x + 1, yr) oberhalb Kontur
                   schnitt = static_cast<double>(konturmax[x] - yl)
                     / (yr - yl - konturmax[x + 1] + konturmax[x]);
                   if (schnitt >= 0 && schnitt <= 1)
@@ -262,7 +262,7 @@ int maindraw()
   double zmin = -5;
   double zmax = 5;
   int num = 20;
-  int pieces = 40;
+  int pieces = 100;
 
   auto func = [](double s, double t)
   { return 10 * exp(-(s * s / 25 + t * t / 100)); };

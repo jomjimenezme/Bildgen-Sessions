@@ -113,6 +113,7 @@ void drawAntialiasedWideLine(Drawing& pic, DPoint2D p1, DPoint2D p2,
   // Konvertiert y-Bereich von verfeinerten Raster im Original-Raster
   int ymin = static_cast<int>(round(1.0 / f * yminf));
   int ymax = static_cast<int>(round(1.0 / f * ymaxf));
+
   // Für jedes Pixel der ursprünglichen Pixelzeile, summiere die
   // Intensitäten innerhalb dieser Zeile.  // Ein Pixel mehr, für Rechenungenauigkeiten.
   vector<int> xx(xmax + 1, 0);

@@ -1,3 +1,5 @@
+
+
 #include <cmath>
 #include <iostream>
 #include <GL/gl.h>
@@ -22,7 +24,7 @@ const double M_PI = 3.14159265358979323846;
 // Male einen Würfel in der angegebenen Farbe
 void drawCube(const DrawColour& col)
 {
-  glBegin(GL_QUADS); //A quad is a 4 vertex quadrilateral primitive.
+  glBegin(GL_QUADS);
   glColor3f(col.red, col.green, col.blue);
   glVertex3f(-1.0f,-1.0f,1.0f);  // Vorderseite
   glVertex3f(1.0f,-1.0f,1.0f);
@@ -56,11 +58,22 @@ void drawSnowmanParts(bool outline)
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   DrawColour white(255, 255, 255);
   DrawColour black(0, 0, 0);
-  DrawColour orange(255, 45, 45);
+  DrawColour orange(255, 45, 0);
+
+  if (outline)
+    {
+      glPolygonMode(GL_FRONT,GL_LINE);
+      glPolygonMode(GL_BACK,GL_LINE);
+      glPolygonOffset(2, 2);                          // z-buffer offset
+      glLineWidth(1.5);
+      white = DrawColour(0, 0, 0);
+      black = DrawColour(255, 255, 255);
+      orange = DrawColour(0, 0, 0);
+    }
 
   // unterer Würfel
   glPushMatrix();
-  glTranslatef(0.0f, 1.0f, 0.0f); //y is oben
+  glTranslatef(0.0f, 1.0f, 0.0f);
   drawCube(white);
   glPopMatrix();
 
@@ -126,13 +139,19 @@ void drawSnowmanParts(bool outline)
   drawCube(black);
   glPopMatrix();
 
+  if (outline)
+  {
+    glPolygonMode(GL_FRONT,GL_FILL);
+    glPolygonMode(GL_BACK,GL_FILL);
+  }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
 
 void drawSnowman()
 {
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-  drawSnowmanParts();
+  drawSnowmanParts(false);
+  drawSnowmanParts(true);
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
 

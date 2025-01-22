@@ -72,6 +72,8 @@ void erzeugeFlaeche(double xmin, double xmax, double zmin, double zmax, int num,
   //   f-Achse entspricht y
   //   t-Achse entspricht z
   //   mit f(s, t) = … ergibt sich also y(x, z) = … in unserem Koordinatensystem
+  //   Taffel?
+  //   wir zeichnen Rechtecke in der xz-Ebene
 
   // HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }

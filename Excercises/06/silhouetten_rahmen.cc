@@ -61,7 +61,7 @@ void erzeugeKurven(double xmin, double xmax, double zmin, double zmax,
   // Eingabe:
   //   xmin, xmax, zmin, zmax - Ausdehnung des Parameterrechtecks
   //   num                    - Anzahl der Kurven
-  //   pieces                 - Anzahl der Strecken aus denen jede Kurve
+  //   PIECES                 - Anzahl der Strecken aus denen jede Kurve
   //                            zusammengesetzt wird
   //   func                   - auszuwertende Funktion: y = func(x, z)
 

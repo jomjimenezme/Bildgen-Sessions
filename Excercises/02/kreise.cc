@@ -11,27 +11,27 @@ void drawCirclePoints(Drawing& pic, int x, int y, IPoint2D center,
   int ycenter = center.y;
   if (!filled)
     {
-      pic.drawPoint(-x + xcenter,  y + ycenter, colour, true);
-      pic.drawPoint( x + xcenter,  y + ycenter, colour, true);
-      pic.drawPoint(-x + xcenter, -y + ycenter, colour, true);
-      pic.drawPoint( x + xcenter, -y + ycenter, colour, true);
-      pic.drawPoint(-y + xcenter,  x + ycenter, colour, true);
-      pic.drawPoint( y + xcenter,  x + ycenter, colour, true);
-      pic.drawPoint(-y + xcenter, -x + ycenter, colour, true);
-      pic.drawPoint( y + xcenter, -x + ycenter, colour, true);
+      pic.drawPoint(-x + xcenter,  y + ycenter, colour, false);
+      pic.drawPoint( x + xcenter,  y + ycenter, colour, false);
+      pic.drawPoint(-x + xcenter, -y + ycenter, colour, false);
+      pic.drawPoint( x + xcenter, -y + ycenter, colour, false);
+      pic.drawPoint(-y + xcenter,  x + ycenter, colour, false);
+      pic.drawPoint( y + xcenter,  x + ycenter, colour, false);
+      pic.drawPoint(-y + xcenter, -x + ycenter, colour, false);
+      pic.drawPoint( y + xcenter, -x + ycenter, colour, false);
     }
   else
     {
       int k;
       for (k = -x; k <= x; k++)
         {
-          pic.drawPoint(k + xcenter, y + ycenter, colour, true);
-          pic.drawPoint(k + xcenter, -y + ycenter, colour, true);
+          pic.drawPoint(k + xcenter, y + ycenter, colour, false);
+          pic.drawPoint(k + xcenter, -y + ycenter, colour, false);
         }
       for (k = -y; k <= y; k++)
         {
-          pic.drawPoint(k + xcenter, x + ycenter, colour, true);
-          pic.drawPoint(k + xcenter, -x + ycenter, colour, true);
+          pic.drawPoint(k + xcenter, x + ycenter, colour, false);
+          pic.drawPoint(k + xcenter, -x + ycenter, colour, false);
         }
       IOThread::msleep(40);
     }

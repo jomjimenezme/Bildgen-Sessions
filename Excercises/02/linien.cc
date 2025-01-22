@@ -105,9 +105,11 @@ void drawLine(Drawing& pic, IPoint2D p1, IPoint2D p2, int colour = 0)
         }
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
       else if (m > 1 && p1.y < p2.y)
-        {
+        {                             //Wir bewegen uns in y-Richtung. Einfach y und x vertauschen.
+        //J.J: Genau! aber das heißt auch, dass wir p1.x < p2.x prüfen und nicht p1.y < p2.y.
           // Linie SSW–NNO            // schnelle Richtung: y, x positiv
-          int mm = 2 * dx;                                    // x <-> y
+          int mm = 2 * dx;            // x <-> y  "Steigung" Ein Schrittwert, um den Fehler beim
+                                      //                                      Weitergehen entlang
           int halb = dy;                                      // x <-> y
           int eins = 2 * halb;
           int D = 0;
@@ -123,8 +125,8 @@ void drawLine(Drawing& pic, IPoint2D p1, IPoint2D p2, int colour = 0)
               pic.drawPoint(x, y, colour, true);
             }
         }
-      else if (m > 1 && p1.y > p2.y)
-        {
+      else if (m > 1 && p1.y > p2.y)//J.J auch hier: x-koordinate Prüfen, nicht y
+          {
           // Linie NNO–SSW           // schnelle Richtung: -y, x negativ
           int mm = -2 * dx;
           int halb = -dy;

@@ -23,7 +23,7 @@ bool clip3D(Vec3D& anf, Vec3D& end, double zmin)
   
   // HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   
-  return true;
+  return true; //----> sichtbar? JA
 }
 
 int maindraw()

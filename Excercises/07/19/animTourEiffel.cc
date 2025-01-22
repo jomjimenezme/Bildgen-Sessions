@@ -54,8 +54,12 @@ int maindraw()
       cops[i].el[0] = 800 * cos(0.02 * M_PI * i);
       cops[i].el[1] = step * i - 662;
       cops[i].el[2] = 800 * sin(0.02 * M_PI * i);
-      vrps[i].el[0] = 0;
-      vrps[i].el[1] = step * i - 662;
+
+      //vrps[i].el[0] = 0;
+      //vrps[i].el[1] = step * i - 662;
+      vrps[i].el[0] = 200;
+      vrps[i].el[1] = 0;
+
       vrps[i].el[2] = 0;
     }
 

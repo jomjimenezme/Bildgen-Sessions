@@ -23,7 +23,7 @@ bool clip3D1(Vec3D& anf, Vec3D& end, double t1, double t2)
 
   if (t1 > t2) //Annahme
     swap(t1, t2);
-  if (t1 > 1 || t2 < 0)   //nichts zu tun
+  if (t1 > 1 || t2 < 0)  //ii) Zurückweisen
     return false;
   
   // i) iii) iv)

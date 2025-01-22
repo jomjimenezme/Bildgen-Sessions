@@ -109,7 +109,7 @@ Matrix4x4 berechneTransformation(const Vec3D& cop, const Vec3D& vrp,
 void maleLinien(Drawing& pic, const vector<Kante>& kanten,
                 const Matrix4x4& t, double un, double vn)
 {
-  // malt die transformierten Kanten ins Bild pic
+  // malt die transformierten Kanten ins Bild pic (2D)
 
   Vec4D nanf, nend;    // Anfangs- und Endpunkt nach Normalisierung
   DPoint2D panf, pend; // Anfangs- und Endpunkt im Bild pic
@@ -117,7 +117,7 @@ void maleLinien(Drawing& pic, const vector<Kante>& kanten,
   int n = kanten.size();
   for (int i = 0; i < n; ++i)
     {
-      // 1. Normalisiere Anfangs- und Endpunkt der Kante
+      // 1. NORMALIZIERTE Anfangs- und Endpunkt der Kante
       //    d.h. Tranformation in kanonischen Bildraum
       nanf = t * kanten[i].anf;
       nend = t * kanten[i].end;

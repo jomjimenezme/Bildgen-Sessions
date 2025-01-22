@@ -5,8 +5,47 @@
 
 using namespace std;
 
+void zeichneLinie( Drawing& pic, IPoint2D p1, IPoint2D p2, DrawColour c){
+
+
+  int len = round (norm (p2-p1));
+    IPoint2D r = (p2-p1);
+
+    IPoint2D q;
+    double delta;
+
+    for( int k = 0; k<= len; ++k)
+    {
+        delta = static_cast<double>(k)/len;
+        q = round ( static_cast<DPoint2D>(p1)  + delta * static_cast<DPoint2D>(r));
+        pic.drawPoint(q, c, false);
+    }
+}
+
+
 int maindraw()
 {
+
+  Drawing pic(400, 400);
+  pic.show();
+  pic.setZoom(2);
+
+  Ipoint2D p1, p2;
+
+  DrawColour c(255, 0,0); //Rot
+
+  while (true){
+   cout << " Eingabe von p1, p2"<< endl;
+   cin >> p1 >> p2;
+
+   if (p1.x<0 || p1.y<0 || p2.x<0 || p2.y<0)
+     break;
+
+    zeichneLinie(pic, p1, p2, c);
+
+  }
+
+
     
   IOThread::waitForWindow(10);
   return 0;

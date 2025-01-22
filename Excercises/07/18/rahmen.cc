@@ -28,19 +28,23 @@ VecRGB berechneBeleuchtung(const Vec3D& ecke, const Vec3D& normale,
   VecRGB lightDiffuse(1, 1, 1);
   VecRGB lightSpecular(1, 1, 1);
 
-  // Explizite Eigenschaften für das Material als Vektor
+  // Explizite Eigenschaften für das Material als Vektor, normiert auf
+  // [0,1]
   VecRGB material(farbe.red() / 255.0, farbe.green() / 255.0,
                   farbe.blue() / 255.0);
+  // Etwas dunkler als die vorgegebene Farbe
   VecRGB materialAmbient(0.5 * material);
+  // Im Grunde die vorgegebene Farbe
   VecRGB materialDiffuse(0.95 * material);
+  // Eine Mischung aus der vorgegebenen Farbe und Weiß
   VecRGB materialSpecular(0.4 * material + 0.3 * VecRGB(1, 1, 1));
+  // Exponent für winkelabhängige Reflexion
   double materialSpecularity = 1.2;
 
   // Konstanten für entfernungsabhängige Dämpfung (attenuation)
   double c0 = 1.0;
   double c1 = 0.00001;
   double c2 = 0.0000004;
-
   // HIER ERGÄNZEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   // Fertige Farbe
